@@ -1,0 +1,2467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shorts Creator Toolkit - Free YouTube Shorts & Reels Tools</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Free professional YouTube Shorts & Instagram Reels toolkit. Generate viral hashtags, AI captions, video ideas, download thumbnails, and analyze content performance.">
+    <meta name="keywords" content="YouTube Shorts tools, Instagram Reels analyzer, shorts hashtag generator, thumbnail downloader, viral shorts ideas, content creation tools">
+    <meta name="author" content="Shorts Creator Toolkit">
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    <meta name="rating" content="general">
+    <meta name="language" content="English">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://shortscreator.tools/">
+    <meta property="og:title" content="Shorts Creator Toolkit - Free YouTube Shorts & Reels Tools">
+    <meta property="og:description" content="Boost your YouTube Shorts & Instagram Reels performance with our free professional toolkit">
+    <meta property="og:image" content="https://shortscreator.tools/og-image.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://shortscreator.tools/">
+    <meta property="twitter:title" content="Shorts Creator Toolkit">
+    <meta property="twitter:description" content="Free YouTube Shorts & Instagram Reels tools for creators">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://shortscreator.tools/">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Shorts Creator Toolkit",
+      "description": "Free YouTube Shorts & Instagram Reels creation and optimization tools",
+      "applicationCategory": "CreatorTools",
+      "operatingSystem": "Web",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "author": {
+        "@type": "Organization",
+        "name": "Shorts Creator Toolkit"
+      }
+    }
+    </script>
+    
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    
+    <style>
+        :root {
+            --primary: #6366f1;
+            --primary-dark: #4f46e5;
+            --secondary: #8b5cf6;
+            --accent: #f59e0b;
+            --instagram: #E4405F;
+            --text-primary: #1f2937;
+            --text-secondary: #6b7280;
+            --bg-light: #f8fafc;
+            --bg-white: #ffffff;
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.12);
+            --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1);
+            --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1);
+            --radius-sm: 8px;
+            --radius-md: 12px;
+            --radius-lg: 16px;
+        }
+        
+        .dark-mode {
+            --primary: #818cf8;
+            --primary-dark: #6366f1;
+            --secondary: #a78bfa;
+            --accent: #fbbf24;
+            --instagram: #ff6b8b;
+            --text-primary: #f3f4f6;
+            --text-secondary: #d1d5db;
+            --bg-light: #111827;
+            --bg-white: #1f2937;
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.3);
+            --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.4);
+            --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.5);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg-light);
+            color: var(--text-primary);
+            line-height: 1.6;
+            min-height: 100vh;
+            padding-top: 130px; /* Adjusted for fixed header */
+        }
+        
+        @media (max-width: 768px) {
+            body {
+                padding-top: 100px;
+            }
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header - Fixed at top */
+        .main-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: var(--bg-white);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .header-top {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 15px 0;
+        }
+        
+        .header-top-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 1.8rem;
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .theme-toggle {
+            background: rgba(255, 255, 255, 0.2);
+            border: none;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            color: white;
+            font-size: 1.2rem;
+            transition: all 0.3s;
+        }
+        
+        .theme-toggle:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: rotate(15deg);
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: white;
+            cursor: pointer;
+            padding: 8px;
+        }
+        
+        /* Navigation - Fixed below header */
+        .main-nav {
+            background: var(--bg-white);
+            border-bottom: 1px solid #e5e7eb;
+            position: sticky;
+            top: 73px; /* Height of header-top */
+            z-index: 999;
+        }
+        
+        .dark-mode .main-nav {
+            border-bottom: 1px solid #374151;
+        }
+        
+        .nav-container {
+            display: flex;
+            justify-content: center;
+            overflow-x: auto;
+            padding: 0 10px;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 5px;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .nav-links a {
+            color: var(--text-primary);
+            text-decoration: none;
+            font-weight: 500;
+            padding: 12px 16px;
+            white-space: nowrap;
+            border-radius: 6px;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.9rem;
+        }
+        
+        .nav-links a:hover {
+            background: var(--bg-light);
+            color: var(--primary);
+        }
+        
+        .nav-links a.active {
+            background: var(--primary);
+            color: white;
+        }
+        
+        .dark-mode .nav-links a:hover {
+            background: #1f2937;
+        }
+        
+        /* Hero Section */
+        .hero {
+            padding: 40px 0;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .hero h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: clamp(2rem, 5vw, 2.8rem);
+            font-weight: 700;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+            color: var(--text-primary);
+        }
+        
+        .tagline {
+            font-size: clamp(1rem, 2vw, 1.2rem);
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+        
+        .hero-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            border: none;
+            padding: 0.875rem 1.75rem;
+            border-radius: var(--radius-sm);
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+        }
+        
+        .hero-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+        }
+        
+        /* Main Content */
+        main {
+            padding: 2rem 0;
+        }
+        
+        /* AdSense Ad Placeholder */
+        .ad-container {
+            margin: 2rem auto;
+            padding: 20px;
+            background: var(--bg-white);
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-sm);
+            text-align: center;
+            color: var(--text-secondary);
+            min-height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px dashed #e5e7eb;
+        }
+        
+        .dark-mode .ad-container {
+            border-color: #374151;
+        }
+        
+        /* Tools Grid */
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        @media (max-width: 768px) {
+            .tools-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .tool-card {
+            background: var(--bg-white);
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            box-shadow: var(--shadow-md);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 1px solid #e5e7eb;
+            scroll-margin-top: 140px; /* For anchor links to account for fixed header */
+        }
+        
+        .dark-mode .tool-card {
+            border-color: #374151;
+        }
+        
+        .tool-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .tool-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+            color: white;
+        }
+        
+        .instagram-icon {
+            background: linear-gradient(135deg, #E4405F, #833AB4);
+        }
+        
+        .tool-card h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+        
+        .tool-description {
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+        
+        /* Form Elements */
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: var(--text-primary);
+        }
+        
+        input, select, textarea {
+            width: 100%;
+            padding: 0.875rem 1rem;
+            border: 2px solid #e5e7eb;
+            border-radius: var(--radius-sm);
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+            background: var(--bg-white);
+            color: var(--text-primary);
+        }
+        
+        .dark-mode input, .dark-mode select, .dark-mode textarea {
+            border-color: #4b5563;
+            background: #374151;
+        }
+        
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+        
+        .checkbox-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+        
+        .checkbox-label {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            cursor: pointer;
+        }
+        
+        .checkbox-label input[type="checkbox"] {
+            width: auto;
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            border: none;
+            padding: 0.875rem 1.75rem;
+            border-radius: var(--radius-sm);
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+        }
+        
+        .btn:active {
+            transform: translateY(0);
+        }
+        
+        .btn-instagram {
+            background: linear-gradient(135deg, #E4405F, #833AB4);
+        }
+        
+        .btn-instagram:hover {
+            box-shadow: 0 4px 12px rgba(228, 64, 95, 0.3);
+        }
+        
+        .btn-secondary {
+            background: var(--bg-white);
+            color: var(--text-primary);
+            border: 2px solid #e5e7eb;
+        }
+        
+        .dark-mode .btn-secondary {
+            border-color: #4b5563;
+        }
+        
+        .btn-secondary:hover {
+            background: #f8fafc;
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .dark-mode .btn-secondary:hover {
+            background: #374151;
+        }
+        
+        /* Output Areas */
+        .output-area {
+            margin-top: 1.5rem;
+            padding: 1.5rem;
+            background: var(--bg-light);
+            border-radius: var(--radius-md);
+            border: 2px solid #e5e7eb;
+            display: none;
+            animation: slideDown 0.3s ease-out;
+        }
+        
+        .dark-mode .output-area {
+            border-color: #374151;
+            background: #1f2937;
+        }
+        
+        .output-area.active {
+            display: block;
+        }
+        
+        .output-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        
+        .copy-btn {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            font-size: 0.875rem;
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+            transition: all 0.3s;
+        }
+        
+        .copy-btn:hover {
+            background: var(--primary-dark);
+        }
+        
+        .copy-btn.instagram {
+            background: var(--instagram);
+        }
+        
+        .copy-btn.instagram:hover {
+            background: #d32a50;
+        }
+        
+        .hashtag-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+        
+        .hashtag {
+            background: var(--bg-white);
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            border: 1px solid #e5e7eb;
+            font-size: 0.875rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            color: var(--text-primary);
+        }
+        
+        .dark-mode .hashtag {
+            border-color: #4b5563;
+            background: #374151;
+        }
+        
+        .hashtag:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-2px);
+        }
+        
+        .thumbnail-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .thumbnail-item {
+            text-align: center;
+        }
+        
+        .thumbnail-img {
+            width: 100%;
+            border-radius: var(--radius-sm);
+            box-shadow: var(--shadow-sm);
+            transition: transform 0.3s;
+        }
+        
+        .thumbnail-img:hover {
+            transform: scale(1.02);
+        }
+        
+        .metadata-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .metadata-item {
+            background: var(--bg-white);
+            padding: 1rem;
+            border-radius: 8px;
+            border: 1px solid #e5e7eb;
+        }
+        
+        .dark-mode .metadata-item {
+            border-color: #374151;
+            background: #374151;
+        }
+        
+        .embed-preview {
+            width: 100%;
+            max-width: 400px;
+            margin: 1rem auto;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+        }
+        
+        .metric-card {
+            background: var(--bg-white);
+            padding: 1.5rem;
+            border-radius: var(--radius-md);
+            border: 1px solid #e5e7eb;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        
+        .dark-mode .metric-card {
+            border-color: #374151;
+            background: #374151;
+        }
+        
+        .metric-card:hover {
+            transform: translateY(-3px);
+        }
+        
+        .metric-value {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin: 0.5rem 0;
+        }
+        
+        .instagram-metric {
+            color: var(--instagram);
+        }
+        
+        .metric-label {
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .metric-change {
+            font-size: 0.75rem;
+            margin-top: 0.5rem;
+        }
+        
+        .metric-change.positive {
+            color: #10b981;
+        }
+        
+        .metric-change.negative {
+            color: #ef4444;
+        }
+        
+        .insight-card {
+            background: var(--bg-white);
+            padding: 1.5rem;
+            border-radius: var(--radius-md);
+            border: 1px solid #e5e7eb;
+            margin-top: 1rem;
+        }
+        
+        .dark-mode .insight-card {
+            border-color: #374151;
+            background: #374151;
+        }
+        
+        .insight-card h4 {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+        
+        .instagram-insight h4 {
+            color: var(--instagram);
+        }
+        
+        /* Features Section */
+        .features {
+            padding: 4rem 0;
+            background: var(--bg-white);
+            margin: 4rem 0;
+        }
+        
+        .dark-mode .features {
+            background: #1f2937;
+        }
+        
+        .features h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: var(--text-primary);
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        
+        .feature {
+            text-align: center;
+            padding: 2rem;
+        }
+        
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+        
+        /* Footer */
+        footer {
+            background: #0f172a;
+            color: #cbd5e1;
+            padding: 4rem 0 2rem;
+        }
+        
+        .dark-mode footer {
+            background: #030712;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+        
+        .footer-section h3 {
+            font-size: 1.25rem;
+            margin-bottom: 1.5rem;
+            color: white;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 0.75rem;
+        }
+        
+        .footer-links a {
+            color: #9ca3af;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid #374151;
+            color: #9ca3af;
+            font-size: 0.875rem;
+        }
+        
+        /* Responsive Navigation */
+        @media (max-width: 1024px) {
+            .nav-links {
+                gap: 2px;
+            }
+            
+            .nav-links a {
+                padding: 10px 12px;
+                font-size: 0.85rem;
+            }
+        }
+        
+        @media (max-width: 900px) {
+            .header-top-content {
+                padding: 0 15px;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .main-nav {
+                position: fixed;
+                top: 73px;
+                left: 0;
+                right: 0;
+                background: var(--bg-white);
+                transform: translateY(-100%);
+                opacity: 0;
+                visibility: hidden;
+                transition: all 0.3s ease;
+                z-index: 998;
+                box-shadow: var(--shadow-lg);
+                max-height: calc(100vh - 73px);
+                overflow-y: auto;
+            }
+            
+            .main-nav.active {
+                transform: translateY(0);
+                opacity: 1;
+                visibility: visible;
+            }
+            
+            .nav-container {
+                justify-content: flex-start;
+                padding: 15px;
+            }
+            
+            .nav-links {
+                flex-direction: column;
+                width: 100%;
+                gap: 5px;
+            }
+            
+            .nav-links a {
+                padding: 12px 15px;
+                border-radius: 8px;
+                justify-content: flex-start;
+            }
+            
+            body {
+                padding-top: 73px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .logo {
+                font-size: 1.5rem;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .tagline {
+                font-size: 1rem;
+            }
+            
+            .main-nav {
+                top: 70px;
+            }
+            
+            .header-top {
+                padding: 12px 0;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .logo span {
+                display: none;
+            }
+            
+            .logo i {
+                font-size: 1.8rem;
+            }
+            
+            .tool-card {
+                padding: 1.5rem;
+            }
+            
+            .tool-card h2 {
+                font-size: 1.3rem;
+            }
+        }
+        
+        /* Animations */
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        
+        /* Utility Classes */
+        .text-center {
+            text-align: center;
+        }
+        
+        .mt-2 { margin-top: 2rem; }
+        .mb-2 { margin-bottom: 2rem; }
+        .my-2 { margin: 2rem 0; }
+        
+        .hidden {
+            display: none !important;
+        }
+        
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: var(--bg-light);
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: var(--primary);
+            border-radius: 5px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--primary-dark);
+        }
+        
+        /* Navigation Scrollbar */
+        .nav-container::-webkit-scrollbar {
+            height: 4px;
+        }
+        
+        .nav-container::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        
+        .nav-container::-webkit-scrollbar-thumb {
+            background: var(--primary);
+            border-radius: 2px;
+        }
+    </style>
+</head>
+<body class="light-mode">
+    <!-- Fixed Header -->
+    <header class="main-header">
+        <!-- Top Header Bar -->
+        <div class="header-top">
+            <div class="container header-top-content">
+                <a href="/" class="logo">
+                    <i class="fas fa-film"></i>
+                    <span>ShortsToolkit</span>
+                </a>
+                
+                <div class="header-actions">
+                    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    
+                    <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Fixed Navigation Bar -->
+        <nav class="main-nav" id="mainNav">
+            <div class="container nav-container">
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#thumbnail"><i class="fas fa-image"></i> Thumbnail</a></li>
+                    <li><a href="#hashtags"><i class="fas fa-hashtag"></i> Hashtags</a></li>
+                    <li><a href="#caption"><i class="fas fa-pen"></i> Caption</a></li>
+                    <li><a href="#ideas"><i class="fas fa-lightbulb"></i> Ideas</a></li>
+                    <li><a href="#info-viewer"><i class="fas fa-info-circle"></i> Info Viewer</a></li>
+                    <li><a href="#embed-generator"><i class="fas fa-code"></i> Embed Generator</a></li>
+                    <li><a href="#instagram-analyzer"><i class="fab fa-instagram"></i> Reel Analyzer</a></li>
+                    <li><a href="#metadata"><i class="fas fa-chart-bar"></i> Analytics</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Shorts Creator Toolkit</h1>
+            <p class="tagline">Professional tools to create viral YouTube Shorts & Instagram Reels. Generate hashtags, captions, ideas, and optimize your content for maximum reach.</p>
+            <a href="#tools" class="hero-btn">
+                <i class="fas fa-rocket"></i>
+                Start Creating
+            </a>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container" id="tools">
+        <!-- AdSense Ad Slot 1 -->
+        <div class="ad-container" id="ad-container-1">
+            <div class="ad-placeholder">
+                <i class="fas fa-ad" style="font-size: 2rem; color: #9ca3af; margin-bottom: 10px;"></i>
+                <p>Ad Placement 728x90</p>
+                <small>AdSense will display relevant ads here</small>
+            </div>
+        </div>
+
+        <!-- Tools Grid -->
+        <div class="tools-grid">
+            <!-- Thumbnail Downloader -->
+            <div class="tool-card" id="thumbnail">
+                <div class="tool-icon">
+                    <i class="fas fa-image"></i>
+                </div>
+                <h2>🎯 Shorts Thumbnail Downloader</h2>
+                <p class="tool-description">Extract high-quality thumbnails from any YouTube Shorts video in multiple resolutions.</p>
+                
+                <div class="form-group">
+                    <label for="thumbUrl"><i class="fas fa-link"></i> YouTube Shorts URL</label>
+                    <input type="url" id="thumbUrl" placeholder="https://youtube.com/shorts/abc123..." required>
+                </div>
+                
+                <button class="btn" onclick="getThumbnail()">
+                    <i class="fas fa-download"></i>
+                    Get Thumbnails
+                </button>
+                
+                <div class="output-area" id="thumbOutput">
+                    <div class="output-header">
+                        <h3>Available Thumbnails</h3>
+                        <small>Click to view full size, right-click to save</small>
+                    </div>
+                    <div class="thumbnail-grid" id="thumbnailsGrid"></div>
+                </div>
+            </div>
+
+            <!-- Hashtag Generator -->
+            <div class="tool-card" id="hashtags">
+                <div class="tool-icon">
+                    <i class="fas fa-hashtag"></i>
+                </div>
+                <h2>#️⃣ Smart Hashtag Generator</h2>
+                <p class="tool-description">Generate viral hashtags tailored to your niche. Click to copy individual hashtags.</p>
+                
+                <div class="form-group">
+                    <label for="hashKeyword"><i class="fas fa-keyboard"></i> Topic/Niche</label>
+                    <input type="text" id="hashKeyword" placeholder="fitness, tech, cooking, gaming..." required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="hashCount"><i class="fas fa-sliders-h"></i> Number of Hashtags</label>
+                    <select id="hashCount">
+                        <option value="10">10 Hashtags</option>
+                        <option value="15" selected>15 Hashtags</option>
+                        <option value="20">20 Hashtags</option>
+                        <option value="30">30 Hashtags</option>
+                    </select>
+                </div>
+                
+                <button class="btn" onclick="generateHashtags()">
+                    <i class="fas fa-magic"></i>
+                    Generate Hashtags
+                </button>
+                
+                <div class="output-area" id="hashOutput">
+                    <div class="output-header">
+                        <h3>Generated Hashtags</h3>
+                        <button class="copy-btn" onclick="copyHashtags()">
+                            <i class="fas fa-copy"></i>
+                            Copy All
+                        </button>
+                    </div>
+                    <div class="hashtag-list" id="hashtagList"></div>
+                </div>
+            </div>
+
+            <!-- Caption Generator -->
+            <div class="tool-card" id="caption">
+                <div class="tool-icon">
+                    <i class="fas fa-pen"></i>
+                </div>
+                <h2>✍️ AI Caption Generator</h2>
+                <p class="tool-description">Create engaging captions optimized for YouTube Shorts algorithm.</p>
+                
+                <div class="form-group">
+                    <label for="capTopic"><i class="fas fa-comment"></i> Video Topic</label>
+                    <input type="text" id="capTopic" placeholder="What's your Shorts about?" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="capTone"><i class="fas fa-palette"></i> Tone/Voice</label>
+                    <select id="capTone">
+                        <option value="viral">🔥 Viral/Hype</option>
+                        <option value="professional">💼 Professional</option>
+                        <option value="funny">😂 Funny</option>
+                        <option value="educational">📚 Educational</option>
+                        <option value="storytelling">📖 Storytelling</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="capLength"><i class="fas fa-ruler"></i> Length</label>
+                    <select id="capLength">
+                        <option value="short">Short (1-2 lines)</option>
+                        <option value="medium" selected>Medium (3-4 lines)</option>
+                        <option value="long">Long (5+ lines)</option>
+                    </select>
+                </div>
+                
+                <button class="btn" onclick="generateCaption()">
+                    <i class="fas fa-robot"></i>
+                    Generate Caption
+                </button>
+                
+                <div class="output-area" id="capOutput">
+                    <div class="output-header">
+                        <h3>Generated Caption</h3>
+                        <button class="copy-btn" onclick="copyCaption()">
+                            <i class="fas fa-copy"></i>
+                            Copy
+                        </button>
+                    </div>
+                    <div id="captionText"></div>
+                </div>
+            </div>
+
+            <!-- Ideas Generator -->
+            <div class="tool-card" id="ideas">
+                <div class="tool-icon">
+                    <i class="fas fa-lightbulb"></i>
+                </div>
+                <h2>💡 Viral Ideas Generator</h2>
+                <p class="tool-description">Get fresh, trending Shorts ideas based on your niche and current trends.</p>
+                
+                <div class="form-group">
+                    <label for="ideaNiche"><i class="fas fa-filter"></i> Select Niche</label>
+                    <select id="ideaNiche">
+                        <option value="motivation">💪 Motivation & Fitness</option>
+                        <option value="tech">💻 Technology</option>
+                        <option value="cooking">👨‍🍳 Cooking & Food</option>
+                        <option value="gaming">🎮 Gaming</option>
+                        <option value="education">📚 Education</option>
+                        <option value="entertainment">🎭 Entertainment</option>
+                        <option value="business">💼 Business & Finance</option>
+                        <option value="lifestyle">🌿 Lifestyle</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="ideaCount"><i class="fas fa-list-ol"></i> Number of Ideas</label>
+                    <select id="ideaCount">
+                        <option value="5">5 Ideas</option>
+                        <option value="10" selected>10 Ideas</option>
+                        <option value="15">15 Ideas</option>
+                    </select>
+                </div>
+                
+                <button class="btn" onclick="generateIdeas()">
+                    <i class="fas fa-bolt"></i>
+                    Generate Ideas
+                </button>
+                
+                <div class="output-area" id="ideaOutput">
+                    <div class="output-header">
+                        <h3>Video Ideas</h3>
+                        <button class="copy-btn" onclick="copyIdeas()">
+                            <i class="fas fa-copy"></i>
+                            Copy
+                        </button>
+                    </div>
+                    <ol id="ideasList" style="padding-left: 1.5rem; margin-top: 1rem;"></ol>
+                </div>
+            </div>
+
+            <!-- YouTube Shorts Info Viewer -->
+            <div class="tool-card" id="info-viewer">
+                <div class="tool-icon">
+                    <i class="fas fa-info-circle"></i>
+                </div>
+                <h2>📊 YouTube Shorts Info Viewer</h2>
+                <p class="tool-description">Extract detailed metadata and information from any YouTube Shorts video.</p>
+                
+                <div class="form-group">
+                    <label for="infoUrl"><i class="fas fa-link"></i> YouTube Shorts URL</label>
+                    <input type="url" id="infoUrl" placeholder="https://youtube.com/shorts/abc123..." required>
+                </div>
+                
+                <div class="form-group">
+                    <label><i class="fas fa-cog"></i> Information to Extract</label>
+                    <div class="checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="infoTitle" checked> Title
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="infoChannel" checked> Channel
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="infoViews" checked> Views
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="infoLikes" checked> Likes
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="infoDate" checked> Upload Date
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="infoDescription" checked> Description
+                        </label>
+                    </div>
+                </div>
+                
+                <button class="btn" onclick="viewShortsInfo()">
+                    <i class="fas fa-search"></i>
+                    Extract Information
+                </button>
+                
+                <div class="output-area" id="infoOutput">
+                    <div class="output-header">
+                        <h3>Shorts Information</h3>
+                        <button class="copy-btn" onclick="copyInfo()">
+                            <i class="fas fa-copy"></i>
+                            Copy
+                        </button>
+                    </div>
+                    <div id="infoContent"></div>
+                </div>
+            </div>
+
+            <!-- Embed Code Generator -->
+            <div class="tool-card" id="embed-generator">
+                <div class="tool-icon">
+                    <i class="fas fa-code"></i>
+                </div>
+                <h2>🔗 Smart Embed Code Generator</h2>
+                <p class="tool-description">Generate responsive embed codes for YouTube Shorts with customization options.</p>
+                
+                <div class="form-group">
+                    <label for="embedUrl"><i class="fas fa-link"></i> YouTube Shorts URL</label>
+                    <input type="url" id="embedUrl" placeholder="https://youtube.com/shorts/abc123..." required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="embedSize"><i class="fas fa-expand"></i> Embed Size</label>
+                    <select id="embedSize">
+                        <option value="responsive">Responsive (Full Width)</option>
+                        <option value="custom">Custom Size</option>
+                        <option value="400x712">Mobile Size (400x712)</option>
+                        <option value="600x1068">Tablet Size (600x1068)</option>
+                    </select>
+                </div>
+                
+                <div id="customSizeContainer" class="hidden">
+                    <div class="form-group">
+                        <label for="embedWidth">Width (px)</label>
+                        <input type="number" id="embedWidth" value="400" min="200" max="1200">
+                    </div>
+                    <div class="form-group">
+                        <label for="embedHeight">Height (px)</label>
+                        <input type="number" id="embedHeight" value="712" min="400" max="2000">
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label><i class="fas fa-cog"></i> Player Options</label>
+                    <div class="checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="embedAutoplay" checked> Autoplay
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="embedControls" checked> Show Controls
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="embedLoop"> Loop Video
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="embedMute" checked> Muted
+                        </label>
+                    </div>
+                </div>
+                
+                <button class="btn" onclick="generateEmbedCode()">
+                    <i class="fas fa-code"></i>
+                    Generate Embed Code
+                </button>
+                
+                <div class="output-area" id="embedOutput">
+                    <div class="output-header">
+                        <h3>Embed Code</h3>
+                        <button class="copy-btn" onclick="copyEmbedCode()">
+                            <i class="fas fa-copy"></i>
+                            Copy Code
+                        </button>
+                    </div>
+                    <div class="embed-preview" id="embedPreview"></div>
+                    <textarea id="embedCode" rows="6" readonly style="width: 100%; margin-top: 1rem; font-family: monospace; resize: vertical;"></textarea>
+                    <p style="margin-top: 0.5rem; font-size: 0.875rem; color: var(--text-secondary);">
+                        <i class="fas fa-info-circle"></i> Paste this code into your website's HTML
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Instagram Reel Analyzer -->
+            <div class="tool-card" id="instagram-analyzer">
+                <div class="tool-icon instagram-icon">
+                    <i class="fab fa-instagram"></i>
+                </div>
+                <h2>📱 Instagram Reel Analyzer</h2>
+                <p class="tool-description">Analyze Instagram Reels performance, extract insights, and optimize your content strategy.</p>
+                
+                <div class="form-group">
+                    <label for="reelUrl"><i class="fas fa-link"></i> Instagram Reel URL</label>
+                    <input type="url" id="reelUrl" placeholder="https://instagram.com/reel/abc123..." required>
+                </div>
+                
+                <div class="form-group">
+                    <label><i class="fas fa-chart-line"></i> Analysis Options</label>
+                    <div class="checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="reelMetrics" checked> Performance Metrics
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="reelHashtags" checked> Hashtag Analysis
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="reelAudience" checked> Audience Insights
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="reelRecommendations"> Optimization Tips
+                        </label>
+                    </div>
+                </div>
+                
+                <button class="btn btn-instagram" onclick="analyzeReel()">
+                    <i class="fas fa-chart-bar"></i>
+                    Analyze Reel
+                </button>
+                
+                <div class="output-area" id="reelOutput">
+                    <div class="output-header">
+                        <h3>Reel Analysis</h3>
+                        <button class="copy-btn instagram" onclick="copyReelAnalysis()">
+                            <i class="fas fa-copy"></i>
+                            Copy Report
+                        </button>
+                    </div>
+                    <div id="reelContent"></div>
+                </div>
+            </div>
+            
+            <!-- Metadata Viewer -->
+            <div class="tool-card" id="metadata">
+                <div class="tool-icon">
+                    <i class="fas fa-chart-bar"></i>
+                </div>
+                <h2>📈 Shorts Analytics Viewer</h2>
+                <p class="tool-description">Analyze Shorts metadata including engagement metrics and performance insights.</p>
+                
+                <div class="form-group">
+                    <label for="metaUrl"><i class="fas fa-link"></i> Shorts URL</label>
+                    <input type="url" id="metaUrl" placeholder="Paste Shorts URL to analyze" required>
+                </div>
+                
+                <button class="btn" onclick="viewMetadata()">
+                    <i class="fas fa-chart-line"></i>
+                    Analyze Shorts
+                </button>
+                
+                <div class="output-area" id="metaOutput">
+                    <div class="output-header">
+                        <h3>Shorts Analytics</h3>
+                    </div>
+                    <div id="metadataContent"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- AdSense Ad Slot 2 -->
+        <div class="ad-container my-2" id="ad-container-2">
+            <div class="ad-placeholder">
+                <i class="fas fa-ad" style="font-size: 2rem; color: #9ca3af; margin-bottom: 10px;"></i>
+                <p>Ad Placement 300x250</p>
+                <small>Responsive ad unit for mobile and desktop</small>
+            </div>
+        </div>
+
+        <!-- Features Section -->
+        <section class="features">
+            <div class="container">
+                <h2>Why Choose Our Toolkit?</h2>
+                <div class="features-grid">
+                    <div class="feature">
+                        <div class="feature-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>100% Legal & Safe</h3>
+                        <p>All tools comply with YouTube's Terms of Service and use official APIs.</p>
+                    </div>
+                    
+                    <div class="feature">
+                        <div class="feature-icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <h3>Instant Results</h3>
+                        <p>Generate hashtags, captions, and ideas in seconds with our AI-powered tools.</p>
+                    </div>
+                    
+                    <div class="feature">
+                        <div class="feature-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h3>Mobile Optimized</h3>
+                        <p>Perfectly responsive design that works on all devices and screen sizes.</p>
+                    </div>
+                    
+                    <div class="feature">
+                        <div class="feature-icon">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                        <h3>No Data Collection</h3>
+                        <p>We don't store or sell your data. Everything runs client-side for privacy.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Shorts Creator Toolkit</h3>
+                    <p>Free professional tools for YouTube Shorts creators. Boost your content creation with our AI-powered toolkit.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#thumbnail">Thumbnail Downloader</a></li>
+                        <li><a href="#hashtags">Hashtag Generator</a></li>
+                        <li><a href="#caption">Caption Generator</a></li>
+                        <li><a href="#ideas">Ideas Generator</a></li>
+                        <li><a href="#info-viewer">Info Viewer</a></li>
+                        <li><a href="#embed-generator">Embed Generator</a></li>
+                        <li><a href="#instagram-analyzer">Reel Analyzer</a></li>
+                        <li><a href="#metadata">Analytics Viewer</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Legal</h3>
+                    <ul class="footer-links">
+                        <li><a href="/privacy">Privacy Policy</a></li>
+                        <li><a href="/terms">Terms of Service</a></li>
+                        <li><a href="/disclaimer">Disclaimer</a></li>
+                        <li><a href="/dmca">DMCA</a></li>
+                        <li><a href="/contact">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Connect</h3>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
+                        <li><a href="#"><i class="fab fa-youtube"></i> YouTube</a></li>
+                        <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+                        <li><a href="#"><i class="fab fa-discord"></i> Discord</a></li>
+                        <li><a href="#"><i class="fas fa-envelope"></i> Newsletter</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>© 2026 Shorts Creator Toolkit. All rights reserved. This tool is not affiliated with YouTube, Instagram, or Google.</p>
+                <p>This site uses cookies to improve user experience. By using our site, you consent to our <a href="/privacy" style="color: var(--primary);">Privacy Policy</a>.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // ========== THEME TOGGLE ==========
+        const themeToggle = document.getElementById('themeToggle');
+        const themeIcon = themeToggle.querySelector('i');
+        
+        // Check for saved theme or prefer-color-scheme
+        const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+        const currentTheme = localStorage.getItem('theme');
+        
+        if (currentTheme === 'dark' || (!currentTheme && prefersDarkScheme.matches)) {
+            document.body.classList.add('dark-mode');
+            document.body.classList.remove('light-mode');
+            themeIcon.classList.remove('fa-moon');
+            themeIcon.classList.add('fa-sun');
+        }
+        
+        themeToggle.addEventListener('click', () => {
+            if (document.body.classList.contains('light-mode')) {
+                document.body.classList.remove('light-mode');
+                document.body.classList.add('dark-mode');
+                themeIcon.classList.remove('fa-moon');
+                themeIcon.classList.add('fa-sun');
+                localStorage.setItem('theme', 'dark');
+            } else {
+                document.body.classList.remove('dark-mode');
+                document.body.classList.add('light-mode');
+                themeIcon.classList.remove('fa-sun');
+                themeIcon.classList.add('fa-moon');
+                localStorage.setItem('theme', 'light');
+            }
+        });
+
+        // ========== MOBILE NAVIGATION ==========
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mainNav = document.getElementById('mainNav');
+        const navLinks = document.querySelectorAll('.nav-links a');
+        
+        // Toggle mobile menu
+        mobileMenuBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            mainNav.classList.toggle('active');
+            mobileMenuBtn.innerHTML = mainNav.classList.contains('active') 
+                ? '<i class="fas fa-times"></i>' 
+                : '<i class="fas fa-bars"></i>';
+        });
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.main-header') && mainNav.classList.contains('active')) {
+                mainNav.classList.remove('active');
+                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+            }
+        });
+        
+        // Close mobile menu when clicking on a link
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mainNav.classList.remove('active');
+                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+            });
+        });
+        
+        // Close mobile menu on ESC key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && mainNav.classList.contains('active')) {
+                mainNav.classList.remove('active');
+                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+            }
+        });
+
+        // ========== SMOOTH SCROLLING ==========
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    e.preventDefault();
+                    const offsetTop = targetElement.offsetTop - 140; // Adjusted for fixed header
+                    
+                    window.scrollTo({
+                        top: offsetTop,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Update URL hash without scrolling
+                    history.pushState(null, null, targetId);
+                    
+                    // Update active nav link
+                    document.querySelectorAll('.nav-links a').forEach(link => {
+                        link.classList.remove('active');
+                    });
+                    this.classList.add('active');
+                }
+            });
+        });
+
+        // Update active nav link on scroll
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('.tool-card');
+            const scrollPosition = window.scrollY + 150; // Adjusted for fixed header
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                const sectionId = section.getAttribute('id');
+                
+                if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                    document.querySelectorAll('.nav-links a').forEach(link => {
+                        link.classList.remove('active');
+                        if (link.getAttribute('href') === `#${sectionId}`) {
+                            link.classList.add('active');
+                        }
+                    });
+                }
+            });
+        });
+
+        // ========== EMBED SIZE SELECTOR ==========
+        const embedSizeSelect = document.getElementById('embedSize');
+        const customSizeContainer = document.getElementById('customSizeContainer');
+        
+        embedSizeSelect.addEventListener('change', function() {
+            if (this.value === 'custom') {
+                customSizeContainer.classList.remove('hidden');
+            } else {
+                customSizeContainer.classList.add('hidden');
+            }
+        });
+
+        // ========== THUMBNAIL DOWNLOADER ==========
+        function getThumbnail() {
+            const url = document.getElementById('thumbUrl').value;
+            if (!url) {
+                alert('Please enter a YouTube Shorts URL');
+                return;
+            }
+
+            // Extract video ID
+            let videoId = '';
+            if (url.includes('shorts/')) {
+                videoId = url.split('shorts/')[1].split('?')[0];
+            } else if (url.includes('youtu.be/')) {
+                videoId = url.split('youtu.be/')[1].split('?')[0];
+            } else if (url.includes('v=')) {
+                videoId = url.split('v=')[1].split('&')[0];
+            }
+
+            if (!videoId) {
+                alert('Invalid YouTube URL. Please use a valid Shorts URL.');
+                return;
+            }
+
+            const output = document.getElementById('thumbOutput');
+            const grid = document.getElementById('thumbnailsGrid');
+            
+            // Thumbnail quality options
+            const qualities = [
+                { name: 'Max Resolution', code: 'maxresdefault' },
+                { name: 'HD (1280x720)', code: 'sddefault' },
+                { name: 'Medium (640x480)', code: 'hqdefault' },
+                { name: 'Standard (480x360)', code: 'mqdefault' },
+                { name: 'Thumbnail (120x90)', code: 'default' }
+            ];
+
+            grid.innerHTML = '';
+            qualities.forEach(quality => {
+                const imgUrl = `https://img.youtube.com/vi/${videoId}/${quality.code}.jpg`;
+                grid.innerHTML += `
+                    <div class="thumbnail-item">
+                        <a href="${imgUrl}" target="_blank">
+                            <img src="${imgUrl}" alt="${quality.name}" class="thumbnail-img" 
+                                 onerror="this.src='https://img.youtube.com/vi/${videoId}/default.jpg'">
+                        </a>
+                        <p style="margin-top: 0.5rem; font-size: 0.875rem;">${quality.name}</p>
+                        <button class="copy-btn" style="margin-top: 0.5rem;" onclick="copyToClipboard('${imgUrl}')">
+                            <i class="fas fa-copy"></i> Copy URL
+                        </button>
+                    </div>
+                `;
+            });
+
+            output.classList.add('active');
+        }
+
+        // ========== HASHTAG GENERATOR ==========
+        const hashtagTemplates = {
+            fitness: ['#WorkoutMotivation', '#FitnessGoals', '#GymLife', '#HealthyLiving', '#ExerciseRoutine'],
+            tech: ['#TechTips', '#GadgetReview', '#TechNews', '#AI', '#Innovation'],
+            cooking: ['#Foodie', '#Recipe', '#CookingTips', '#Delicious', '#HomeCooked'],
+            gaming: ['#Gaming', '#Gameplay', '#Esports', '#GamingCommunity', '#LiveStream'],
+            education: ['#LearnSomethingNew', '#Education', '#StudyTips', '#Knowledge', '#Tutorial'],
+            entertainment: ['#Funny', '#Entertainment', '#Viral', '#Comedy', '#Trending'],
+            business: ['#BusinessTips', '#Entrepreneur', '#Startup', '#Finance', '#Success'],
+            lifestyle: ['#Lifestyle', '#DailyVlog', '#LifeHacks', '#Wellness', '#SelfCare']
+        };
+
+        function generateHashtags() {
+            const keyword = document.getElementById('hashKeyword').value.toLowerCase() || 'shorts';
+            const count = parseInt(document.getElementById('hashCount').value);
+            const niche = getNicheFromKeyword(keyword);
+            
+            let hashtags = [];
+            
+            // Add niche-specific hashtags
+            if (hashtagTemplates[niche]) {
+                hashtags = [...hashtagTemplates[niche]];
+            }
+            
+            // Add keyword variations
+            const variations = [
+                keyword,
+                keyword + 'shorts',
+                keyword + 'video',
+                keyword + 'content',
+                keyword + 'tips',
+                keyword + 'tricks',
+                keyword + 'hacks',
+                keyword + '2026'
+            ];
+            
+            variations.forEach(variation => {
+                hashtags.push('#' + variation.replace(/\s+/g, ''));
+            });
+            
+            // Add general Shorts hashtags
+            const generalTags = [
+                '#YouTubeShorts', '#Shorts', '#ShortVideo', '#ViralShorts',
+                '#ShortsChallenge', '#ShortsFeed', '#ShortsViral', '#ShortsVideo',
+                '#ShortsContent', '#ShortsCreators', '#ShortFormContent'
+            ];
+            
+            hashtags = [...new Set([...hashtags, ...generalTags])].slice(0, count);
+            
+            // Display hashtags
+            const hashtagList = document.getElementById('hashtagList');
+            hashtagList.innerHTML = hashtags.map(tag => 
+                `<span class="hashtag" onclick="copyToClipboard('${tag}')">${tag}</span>`
+            ).join('');
+            
+            document.getElementById('hashOutput').classList.add('active');
+        }
+
+        function getNicheFromKeyword(keyword) {
+            const niches = {
+                fitness: ['fitness', 'workout', 'gym', 'exercise', 'health'],
+                tech: ['tech', 'technology', 'gadget', 'computer', 'phone'],
+                cooking: ['cook', 'food', 'recipe', 'kitchen', 'baking'],
+                gaming: ['game', 'gaming', 'esports', 'stream', 'play'],
+                education: ['learn', 'study', 'education', 'tutorial', 'course'],
+                entertainment: ['funny', 'comedy', 'entertainment', 'show', 'movie'],
+                business: ['business', 'money', 'finance', 'entrepreneur', 'startup'],
+                lifestyle: ['lifestyle', 'vlog', 'daily', 'life', 'wellness']
+            };
+            
+            for (const [niche, keywords] of Object.entries(niches)) {
+                if (keywords.some(k => keyword.includes(k))) {
+                    return niche;
+                }
+            }
+            return 'entertainment';
+        }
+
+        // ========== CAPTION GENERATOR ==========
+        const captionTemplates = {
+            viral: [
+                "🔥 This will blow your mind! Watch till the end!",
+                "You won't believe what happens next... 👀",
+                "This changed everything for me! 🤯",
+                "The secret nobody tells you about... 🔥",
+                "Going viral in 3...2...1... 💥"
+            ],
+            professional: [
+                "Mastering the art of [TOPIC] in 60 seconds.",
+                "Professional insights on [TOPIC] you need to know.",
+                "Industry secrets revealed: [TOPIC] explained simply.",
+                "Elevate your skills with this quick [TOPIC] tutorial."
+            ],
+            funny: [
+                "When [TOPIC] goes completely wrong... 😂",
+                "POV: You're trying to [TOPIC] for the first time",
+                "The struggle is real! 😅 #relatable",
+                "Me pretending to know what I'm doing with [TOPIC]"
+            ],
+            educational: [
+                "Learn [TOPIC] in 60 seconds or less!",
+                "Quick lesson: Understanding [TOPIC] made simple",
+                "Did you know this about [TOPIC]?",
+                "The science behind [TOPIC] explained simply"
+            ],
+            storytelling: [
+                "The day everything changed... This is my story with [TOPIC]",
+                "From zero to hero: My [TOPIC] journey",
+                "What they don't tell you about [TOPIC]...",
+                "This moment changed my perspective on [TOPIC] forever"
+            ]
+        };
+
+        function generateCaption() {
+            const topic = document.getElementById('capTopic').value || 'this topic';
+            const tone = document.getElementById('capTone').value;
+            const length = document.getElementById('capLength').value;
+            
+            let template = captionTemplates[tone][Math.floor(Math.random() * captionTemplates[tone].length)];
+            let caption = template.replace('[TOPIC]', topic);
+            
+            // Add emojis based on tone
+            const emojiMap = {
+                viral: '🔥🚀👀💥🤯',
+                professional: '💼📊🎯📈👔',
+                funny: '😂😅🤣😭👏',
+                educational: '📚🎓🧠💡📝',
+                storytelling: '📖✨🌟🎭❤️'
+            };
+            
+            // Add hashtags
+            const hashtags = `\n\n#${topic.replace(/\s+/g, '')} #YouTubeShorts #Shorts #Viral`;
+            
+            // Adjust length
+            if (length === 'short') {
+                caption = caption.split('.').slice(0, 1).join('.') + '...' + hashtags;
+            } else if (length === 'long') {
+                caption = caption + '\n\n' + 
+                         `What's your take on ${topic}?\n` +
+                         `Comment below! 👇` +
+                         hashtags;
+            } else {
+                caption = caption + hashtags;
+            }
+            
+            document.getElementById('captionText').innerText = caption;
+            document.getElementById('capOutput').classList.add('active');
+        }
+
+        // ========== IDEAS GENERATOR ==========
+        const ideaTemplates = {
+            motivation: [
+                "3 Morning Habits That Changed My Life",
+                "Overcoming Fear of Failure in 60 Seconds",
+                "The 1% Improvement Rule for Success",
+                "Building Confidence When You Feel Insecure",
+                "From Procrastination to Productivity: My Story"
+            ],
+            tech: [
+                "5 Tech Gadgets Under $50 That Are Worth It",
+                "Future Technology That Will Change Everything",
+                "iPhone vs Android - Ultimate Comparison",
+                "Protect Your Privacy Online - Essential Tips",
+                "AI Tools That Will Make Your Life Easier"
+            ],
+            cooking: [
+                "3-Ingredient Recipe That Tastes Expensive",
+                "Common Cooking Mistakes Everyone Makes",
+                "Healthy Meal Prep in Under 10 Minutes",
+                "Restaurant Secrets You Can Use at Home",
+                "5 Kitchen Hacks That Will Save You Time"
+            ],
+            gaming: [
+                "Pro Gamer Settings You Should Copy",
+                "Games That Are Free But Feel Premium",
+                "Building Your First Gaming PC - Step by Step",
+                "Secret Tips for Popular Games",
+                "Best Games of 2026 You Need to Play"
+            ],
+            education: [
+                "Study Techniques That Actually Work",
+                "Learning a New Skill in 30 Days Challenge",
+                "Memory Hacks for Students",
+                "Online Courses That Are Actually Worth It",
+                "Time Management for Busy People"
+            ],
+            entertainment: [
+                "Try Not to Laugh Challenge",
+                "Satisfying Videos Compilation",
+                "Movie Plot Holes That Make No Sense",
+                "Celebrity Transformations Over the Years",
+                "Behind the Scenes of Viral Videos"
+            ],
+            business: [
+                "Starting a Business With No Money",
+                "Digital Marketing Strategies That Work",
+                "Passive Income Ideas for 2026",
+                "Negotiation Tips That Get Results",
+                "Building Your Personal Brand Online"
+            ],
+            lifestyle: [
+                "Minimalist Living - What I Learned",
+                "Daily Routine of Successful People",
+                "Budget Travel Tips That Save Money",
+                "Sustainable Living Made Simple",
+                "Self-Care Routine That Actually Works"
+            ]
+        };
+
+        function generateIdeas() {
+            const niche = document.getElementById('ideaNiche').value;
+            const count = parseInt(document.getElementById('ideaCount').value);
+            const ideas = ideaTemplates[niche] || ideaTemplates['entertainment'];
+            
+            const selectedIdeas = [];
+            const usedIndices = new Set();
+            
+            while (selectedIdeas.length < count && selectedIdeas.length < ideas.length) {
+                const randomIndex = Math.floor(Math.random() * ideas.length);
+                if (!usedIndices.has(randomIndex)) {
+                    selectedIdeas.push(ideas[randomIndex]);
+                    usedIndices.add(randomIndex);
+                }
+            }
+            
+            const ideasList = document.getElementById('ideasList');
+            ideasList.innerHTML = selectedIdeas.map((idea, index) => 
+                `<li style="margin-bottom: 0.75rem;">${idea}</li>`
+            ).join('');
+            
+            document.getElementById('ideaOutput').classList.add('active');
+        }
+
+        // ========== SHORTS INFO VIEWER ==========
+        async function viewShortsInfo() {
+            const url = document.getElementById('infoUrl').value;
+            if (!url) {
+                alert('Please enter a YouTube Shorts URL');
+                return;
+            }
+
+            // Extract video ID
+            let videoId = '';
+            if (url.includes('shorts/')) {
+                videoId = url.split('shorts/')[1].split('?')[0];
+            } else if (url.includes('youtu.be/')) {
+                videoId = url.split('youtu.be/')[1].split('?')[0];
+            } else if (url.includes('v=')) {
+                videoId = url.split('v=')[1].split('&')[0];
+            }
+
+            if (!videoId) {
+                alert('Invalid YouTube URL. Please use a valid Shorts URL.');
+                return;
+            }
+
+            // Mock data for demonstration
+            const mockInfo = {
+                title: "Amazing Shorts Video That Went Viral!",
+                channel: "Creator Pro",
+                views: "2.5M views",
+                likes: "450K",
+                comments: "12.5K",
+                uploadDate: "2026-01-10",
+                duration: "58 seconds",
+                description: "This is an amazing YouTube Shorts video that went viral last week. The content is engaging and perfect for the platform.",
+                engagementRate: "18.2%",
+                category: "Entertainment",
+                tags: ["viral", "shorts", "funny", "trending", "youtube"],
+                videoUrl: `https://youtube.com/shorts/${videoId}`,
+                thumbnailUrl: `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`
+            };
+
+            const content = document.getElementById('infoContent');
+            let html = '<div class="metadata-grid">';
+            
+            // Check which info to show
+            if (document.getElementById('infoTitle').checked) {
+                html += `
+                    <div class="metadata-item">
+                        <div style="font-size: 0.875rem; color: var(--text-secondary);">Title</div>
+                        <div style="font-weight: 600; margin-top: 0.25rem;">${mockInfo.title}</div>
+                    </div>
+                `;
+            }
+            
+            if (document.getElementById('infoChannel').checked) {
+                html += `
+                    <div class="metadata-item">
+                        <div style="font-size: 0.875rem; color: var(--text-secondary);">Channel</div>
+                        <div style="font-weight: 600; margin-top: 0.25rem;">${mockInfo.channel}</div>
+                    </div>
+                `;
+            }
+            
+            if (document.getElementById('infoViews').checked) {
+                html += `
+                    <div class="metadata-item">
+                        <div style="font-size: 0.875rem; color: var(--text-secondary);">Views</div>
+                        <div style="font-weight: 600; margin-top: 0.25rem; color: var(--primary);">${mockInfo.views}</div>
+                    </div>
+                `;
+            }
+            
+            if (document.getElementById('infoLikes').checked) {
+                html += `
+                    <div class="metadata-item">
+                        <div style="font-size: 0.875rem; color: var(--text-secondary);">Likes</div>
+                        <div style="font-weight: 600; margin-top: 0.25rem; color: var(--primary);">${mockInfo.likes}</div>
+                    </div>
+                `;
+            }
+            
+            if (document.getElementById('infoDate').checked) {
+                html += `
+                    <div class="metadata-item">
+                        <div style="font-size: 0.875rem; color: var(--text-secondary);">Upload Date</div>
+                        <div style="font-weight: 600; margin-top: 0.25rem;">${mockInfo.uploadDate}</div>
+                    </div>
+                `;
+            }
+            
+            if (document.getElementById('infoDescription').checked) {
+                html += `
+                    <div class="metadata-item" style="grid-column: 1 / -1;">
+                        <div style="font-size: 0.875rem; color: var(--text-secondary);">Description</div>
+                        <div style="margin-top: 0.5rem; line-height: 1.5;">${mockInfo.description}</div>
+                    </div>
+                `;
+            }
+            
+            html += '</div>';
+            
+            // Additional info
+            html += `
+                <div style="margin-top: 1.5rem;">
+                    <h4 style="margin-bottom: 0.5rem;">Additional Information</h4>
+                    <div style="display: flex; flex-wrap: wrap; gap: 1rem; font-size: 0.875rem;">
+                        <div><strong>Duration:</strong> ${mockInfo.duration}</div>
+                        <div><strong>Category:</strong> ${mockInfo.category}</div>
+                        <div><strong>Engagement Rate:</strong> ${mockInfo.engagementRate}</div>
+                    </div>
+                </div>
+                
+                <div style="margin-top: 1.5rem;">
+                    <h4 style="margin-bottom: 0.5rem;">Video Tags</h4>
+                    <div class="hashtag-list">
+                        ${mockInfo.tags.map(tag => `<span class="hashtag">${tag}</span>`).join('')}
+                    </div>
+                </div>
+                
+                <div style="margin-top: 1.5rem; padding: 1rem; background: var(--bg-white); border-radius: 8px; border: 1px solid #e5e7eb;">
+                    <div style="font-size: 0.875rem; color: var(--text-secondary);">Direct Links</div>
+                    <div style="display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 0.5rem;">
+                        <button class="copy-btn" onclick="copyToClipboard('${mockInfo.videoUrl}')">
+                            <i class="fas fa-link"></i> Copy Video URL
+                        </button>
+                        <button class="copy-btn" onclick="copyToClipboard('${mockInfo.thumbnailUrl}')">
+                            <i class="fas fa-image"></i> Copy Thumbnail URL
+                        </button>
+                    </div>
+                </div>
+            `;
+            
+            content.innerHTML = html;
+            document.getElementById('infoOutput').classList.add('active');
+        }
+
+        // ========== EMBED CODE GENERATOR ==========
+        function generateEmbedCode() {
+            const url = document.getElementById('embedUrl').value;
+            if (!url) {
+                alert('Please enter a YouTube Shorts URL');
+                return;
+            }
+
+            // Extract video ID
+            let videoId = '';
+            if (url.includes('shorts/')) {
+                videoId = url.split('shorts/')[1].split('?')[0];
+            } else if (url.includes('youtu.be/')) {
+                videoId = url.split('youtu.be/')[1].split('?')[0];
+            } else if (url.includes('v=')) {
+                videoId = url.split('v=')[1].split('&')[0];
+            }
+
+            if (!videoId) {
+                alert('Invalid YouTube URL. Please use a valid Shorts URL.');
+                return;
+            }
+
+            // Get embed options
+            const sizeOption = document.getElementById('embedSize').value;
+            let width = 400;
+            let height = 712;
+            
+            if (sizeOption === 'responsive') {
+                width = '100%';
+                height = '712';
+            } else if (sizeOption === 'custom') {
+                width = document.getElementById('embedWidth').value;
+                height = document.getElementById('embedHeight').value;
+            } else if (sizeOption === '400x712') {
+                width = '400';
+                height = '712';
+            } else if (sizeOption === '600x1068') {
+                width = '600';
+                height = '1068';
+            }
+            
+            // Get player options
+            const autoplay = document.getElementById('embedAutoplay').checked ? 1 : 0;
+            const controls = document.getElementById('embedControls').checked ? 1 : 0;
+            const loop = document.getElementById('embedLoop').checked ? 1 : 0;
+            const mute = document.getElementById('embedMute').checked ? 1 : 0;
+            
+            // Build embed URL with parameters
+            let embedUrl = `https://www.youtube.com/embed/${videoId}`;
+            const params = [];
+            
+            if (autoplay) params.push('autoplay=1');
+            if (!controls) params.push('controls=0');
+            if (loop) params.push('loop=1');
+            if (mute) params.push('mute=1');
+            
+            // Add playlist parameter for loop to work properly
+            if (loop) params.push(`playlist=${videoId}`);
+            
+            if (params.length > 0) {
+                embedUrl += '?' + params.join('&');
+            }
+            
+            // Generate embed code
+            const embedCode = `<iframe width="${width}" height="${height}" src="${embedUrl}" title="YouTube Shorts video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`;
+            
+            // Display embed code
+            document.getElementById('embedCode').value = embedCode;
+            
+            // Show preview
+            const preview = document.getElementById('embedPreview');
+            preview.innerHTML = embedCode;
+            
+            // Make iframe responsive if needed
+            if (sizeOption === 'responsive') {
+                preview.querySelector('iframe').style.width = '100%';
+            }
+            
+            document.getElementById('embedOutput').classList.add('active');
+        }
+
+        // ========== INSTAGRAM REEL ANALYZER ==========
+        function analyzeReel() {
+            const url = document.getElementById('reelUrl').value;
+            if (!url) {
+                alert('Please enter an Instagram Reel URL');
+                return;
+            }
+
+            // Extract reel ID
+            let reelId = '';
+            if (url.includes('/reel/')) {
+                reelId = url.split('/reel/')[1].split('/')[0];
+            } else if (url.includes('/p/')) {
+                reelId = url.split('/p/')[1].split('/')[0];
+            }
+
+            if (!reelId) {
+                alert('Invalid Instagram URL. Please use a valid Reel URL.');
+                return;
+            }
+
+            // Mock data for Instagram Reel analysis
+            const reelData = {
+                username: "@creatormaster",
+                likes: "125K",
+                comments: "3.2K",
+                shares: "8.5K",
+                saves: "15.2K",
+                reach: "2.1M",
+                impressions: "3.5M",
+                engagementRate: "6.8%",
+                videoViews: "4.2M",
+                avgWatchTime: "18.5s",
+                postedDate: "2 days ago",
+                duration: "21 seconds",
+                music: "Trending Sound - Viral Audio",
+                hashtags: ["#reels", "#viralreels", "#trending", "#fyp", "#instagood", "#reelsinstagram", "#explorepage", "#contentcreator"],
+                topComments: [
+                    "This is amazing! 🔥",
+                    "How did you do that?",
+                    "Love the transition!",
+                    "This deserves to go viral!",
+                    "So creative! 💯"
+                ],
+                audienceDemographics: {
+                    age: "18-24 (65%)",
+                    gender: "Female (58%)",
+                    location: "USA (32%), India (18%), UK (12%)"
+                },
+                bestPostingTime: "7-9 PM (Local Time)",
+                suggestedHashtags: ["#reelitfeelit", "#reelsvideo", "#reelsindia", "#reelkarofeelkaro", "#instareels", "#reelsoftheday", "#reelsviral", "#reelslovers"]
+            };
+
+            const content = document.getElementById('reelContent');
+            let html = '';
+            
+            // Performance Metrics
+            if (document.getElementById('reelMetrics').checked) {
+                html += `
+                    <div style="margin-bottom: 2rem;">
+                        <h4 style="margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
+                            <i class="fas fa-chart-line" style="color: var(--instagram);"></i>
+                            Performance Metrics
+                        </h4>
+                        <div class="metadata-grid">
+                            <div class="metric-card">
+                                <div class="metric-label">Likes</div>
+                                <div class="metric-value instagram-metric">${reelData.likes}</div>
+                                <div class="metric-change positive">+24% from average</div>
+                            </div>
+                            <div class="metric-card">
+                                <div class="metric-label">Comments</div>
+                                <div class="metric-value instagram-metric">${reelData.comments}</div>
+                                <div class="metric-change positive">+18% from average</div>
+                            </div>
+                            <div class="metric-card">
+                                <div class="metric-label">Shares</div>
+                                <div class="metric-value instagram-metric">${reelData.shares}</div>
+                                <div class="metric-change positive">+32% from average</div>
+                            </div>
+                            <div class="metric-card">
+                                <div class="metric-label">Saves</div>
+                                <div class="metric-value instagram-metric">${reelData.saves}</div>
+                                <div class="metric-change positive">+41% from average</div>
+                            </div>
+                            <div class="metric-card">
+                                <div class="metric-label">Reach</div>
+                                <div class="metric-value instagram-metric">${reelData.reach}</div>
+                                <div class="metric-change positive">+28% from average</div>
+                            </div>
+                            <div class="metric-card">
+                                <div class="metric-label">Engagement Rate</div>
+                                <div class="metric-value instagram-metric">${reelData.engagementRate}</div>
+                                <div class="metric-change positive">+2.1% from average</div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }
+            
+            // Hashtag Analysis
+            if (document.getElementById('reelHashtags').checked) {
+                html += `
+                    <div style="margin-bottom: 2rem;">
+                        <h4 style="margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
+                            <i class="fas fa-hashtag" style="color: var(--instagram);"></i>
+                            Hashtag Analysis
+                        </h4>
+                        <div class="insight-card">
+                            <h5>Used Hashtags</h5>
+                            <div class="hashtag-list" style="margin-top: 1rem;">
+                                ${reelData.hashtags.map(tag => `<span class="hashtag">${tag}</span>`).join('')}
+                            </div>
+                            <div style="margin-top: 1.5rem;">
+                                <h5>Suggested Hashtags for Better Reach</h5>
+                                <div class="hashtag-list" style="margin-top: 1rem;">
+                                    ${reelData.suggestedHashtags.map(tag => `<span class="hashtag" onclick="copyToClipboard('${tag}')">${tag}</span>`).join('')}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }
+            
+            // Audience Insights
+            if (document.getElementById('reelAudience').checked) {
+                html += `
+                    <div style="margin-bottom: 2rem;">
+                        <h4 style="margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
+                            <i class="fas fa-users" style="color: var(--instagram);"></i>
+                            Audience Insights
+                        </h4>
+                        <div class="metadata-grid">
+                            <div class="metric-card">
+                                <div class="metric-label">Primary Age Group</div>
+                                <div class="metric-value" style="font-size: 1.5rem;">${reelData.audienceDemographics.age}</div>
+                                <div class="metric-label">Most Engaged</div>
+                            </div>
+                            <div class="metric-card">
+                                <div class="metric-label">Gender Distribution</div>
+                                <div class="metric-value" style="font-size: 1.5rem;">${reelData.audienceDemographics.gender}</div>
+                                <div class="metric-label">Audience Split</div>
+                            </div>
+                            <div class="metric-card">
+                                <div class="metric-label">Top Locations</div>
+                                <div class="metric-value" style="font-size: 1.2rem; line-height: 1.4;">${reelData.audienceDemographics.location}</div>
+                                <div class="metric-label">Geographic Reach</div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }
+            
+            // Optimization Tips
+            if (document.getElementById('reelRecommendations').checked) {
+                html += `
+                    <div style="margin-bottom: 2rem;">
+                        <h4 style="margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
+                            <i class="fas fa-lightbulb" style="color: var(--instagram);"></i>
+                            Optimization Tips
+                        </h4>
+                        <div class="insight-card instagram-insight">
+                            <h4><i class="fas fa-clock"></i> Best Posting Time</h4>
+                            <p>Based on your audience activity, the optimal posting time is <strong>${reelData.bestPostingTime}</strong>.</p>
+                        </div>
+                        
+                        <div class="insight-card instagram-insight" style="margin-top: 1rem;">
+                            <h4><i class="fas fa-music"></i> Audio Strategy</h4>
+                            <p>This reel used trending audio: <strong>"${reelData.music}"</strong>. Using trending sounds increases discoverability by 65%.</p>
+                        </div>
+                        
+                        <div class="insight-card instagram-insight" style="margin-top: 1rem;">
+                            <h4><i class="fas fa-chart-bar"></i> Performance Insights</h4>
+                            <ul style="padding-left: 1.5rem; margin-top: 0.5rem;">
+                                <li>Save rate is exceptionally high (${reelData.saves}) - indicates valuable content</li>
+                                <li>Share rate of ${reelData.shares} suggests high virality potential</li>
+                                <li>Average watch time of ${reelData.avgWatchTime} (88% of video length) indicates strong retention</li>
+                                <li>Engagement rate of ${reelData.engagementRate} is above platform average (1.5-3%)</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="insight-card instagram-insight" style="margin-top: 1rem;">
+                            <h4><i class="fas fa-bullseye"></i> Content Recommendations</h4>
+                            <ul style="padding-left: 1.5rem; margin-top: 0.5rem;">
+                                <li>Create more content similar to this style (tutorial/transition-based)</li>
+                                <li>Post during ${reelData.bestPostingTime} for maximum reach</li>
+                                <li>Use 5-8 relevant hashtags (mix of popular and niche)</li>
+                                <li>Include a clear call-to-action in caption to boost comments</li>
+                                <li>Collaborate with creators in similar niches</li>
+                            </ul>
+                        </div>
+                    </div>
+                `;
+            }
+            
+            // Additional Info
+            html += `
+                <div class="insight-card">
+                    <h4><i class="fas fa-info-circle"></i> Quick Stats</h4>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 1rem;">
+                        <div>
+                            <div style="font-size: 0.875rem; color: var(--text-secondary);">Username</div>
+                            <div style="font-weight: 600;">${reelData.username}</div>
+                        </div>
+                        <div>
+                            <div style="font-size: 0.875rem; color: var(--text-secondary);">Posted</div>
+                            <div style="font-weight: 600;">${reelData.postedDate}</div>
+                        </div>
+                        <div>
+                            <div style="font-size: 0.875rem; color: var(--text-secondary);">Duration</div>
+                            <div style="font-weight: 600;">${reelData.duration}</div>
+                        </div>
+                        <div>
+                            <div style="font-size: 0.875rem; color: var(--text-secondary);">Video Views</div>
+                            <div style="font-weight: 600; color: var(--instagram);">${reelData.videoViews}</div>
+                        </div>
+                    </div>
+                </div>
+            `;
+            
+            content.innerHTML = html;
+            document.getElementById('reelOutput').classList.add('active');
+        }
+
+        // ========== METADATA VIEWER ==========
+        function viewMetadata() {
+            document.getElementById('metaOutput').innerHTML = `
+                <div class="output-header">
+                    <h3>Shorts Analytics</h3>
+                </div>
+                <div class="metadata-grid">
+                    <div class="metadata-item">
+                        <div style="font-size: 0.875rem; color: var(--text-secondary);">Title</div>
+                        <div style="font-weight: 600; margin-top: 0.25rem;">Sample Shorts Title</div>
+                    </div>
+                    <div class="metadata-item">
+                        <div style="font-size: 0.875rem; color: var(--text-secondary);">Channel</div>
+                        <div style="font-weight: 600; margin-top: 0.25rem;">Sample Channel</div>
+                    </div>
+                    <div class="metadata-item">
+                        <div style="font-size: 0.875rem; color: var(--text-secondary);">Views</div>
+                        <div style="font-weight: 600; margin-top: 0.25rem; color: var(--primary);">1.2M</div>
+                    </div>
+                    <div class="metadata-item">
+                        <div style="font-size: 0.875rem; color: var(--text-secondary);">Likes</div>
+                        <div style="font-weight: 600; margin-top: 0.25rem; color: var(--primary);">250K</div>
+                    </div>
+                    <div class="metadata-item">
+                        <div style="font-size: 0.875rem; color: var(--text-secondary);">Comments</div>
+                        <div style="font-weight: 600; margin-top: 0.25rem; color: var(--accent);">8.5K</div>
+                    </div>
+                    <div class="metadata-item">
+                        <div style="font-size: 0.875rem; color: var(--text-secondary);">Engagement</div>
+                        <div style="font-weight: 600; margin-top: 0.25rem; color: var(--accent);">21.5%</div>
+                    </div>
+                </div>
+                <div style="margin-top: 1.5rem; padding: 1rem; background: var(--bg-white); border-radius: 8px;">
+                    <h4 style="margin-bottom: 0.5rem;">Performance Insights</h4>
+                    <p style="color: var(--text-secondary); font-size: 0.875rem;">
+                        This Shorts video is performing above average for its category. 
+                        The engagement rate suggests strong viewer interaction.
+                    </p>
+                </div>
+            `;
+            document.getElementById('metaOutput').classList.add('active');
+        }
+
+        // ========== COPY FUNCTIONS ==========
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text).then(() => {
+                // Show success message
+                const originalText = event.target.innerHTML;
+                event.target.innerHTML = '<i class="fas fa-check"></i> Copied!';
+                event.target.style.background = '#10b981';
+                
+                setTimeout(() => {
+                    event.target.innerHTML = originalText;
+                    event.target.style.background = '';
+                }, 2000);
+            }).catch(err => {
+                console.error('Failed to copy: ', err);
+                alert('Failed to copy to clipboard. Please try again.');
+            });
+        }
+
+        function copyHashtags() {
+            const hashtags = document.getElementById('hashtagList').textContent;
+            copyToClipboard(hashtags);
+        }
+
+        function copyCaption() {
+            const caption = document.getElementById('captionText').textContent;
+            copyToClipboard(caption);
+        }
+
+        function copyIdeas() {
+            const ideas = document.getElementById('ideasList').textContent;
+            copyToClipboard(ideas);
+        }
+
+        function copyInfo() {
+            const info = document.getElementById('infoContent').textContent;
+            copyToClipboard(info);
+        }
+
+        function copyEmbedCode() {
+            const embedCode = document.getElementById('embedCode').value;
+            copyToClipboard(embedCode);
+        }
+
+        function copyReelAnalysis() {
+            const reelAnalysis = document.getElementById('reelContent').textContent;
+            copyToClipboard(reelAnalysis);
+        }
+
+        // ========== INITIALIZATION ==========
+        document.addEventListener('DOMContentLoaded', () => {
+            // Pre-populate with sample data
+            document.getElementById('hashKeyword').value = 'fitness';
+            document.getElementById('capTopic').value = 'morning workout routine';
+            document.getElementById('infoUrl').value = 'https://youtube.com/shorts/abc123';
+            document.getElementById('embedUrl').value = 'https://youtube.com/shorts/abc123';
+            document.getElementById('reelUrl').value = 'https://instagram.com/reel/abc123';
+            document.getElementById('metaUrl').value = 'https://youtube.com/shorts/abc123';
+            document.getElementById('thumbUrl').value = 'https://youtube.com/shorts/abc123';
+            
+            // Animate tools on load
+            const tools = document.querySelectorAll('.tool-card');
+            tools.forEach((tool, index) => {
+                tool.style.animation = `slideDown 0.5s ease-out ${index * 0.1}s both`;
+            });
+            
+            // Initialize active nav link
+            const currentHash = window.location.hash;
+            if (currentHash) {
+                const activeLink = document.querySelector(`.nav-links a[href="${currentHash}"]`);
+                if (activeLink) {
+                    activeLink.classList.add('active');
+                }
+            }
+        });
+    </script>
+</body>
+</html>
