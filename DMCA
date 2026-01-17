@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DMCA Policy - Shorts Creator Toolkit | Copyright Protection</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="DMCA Policy for Shorts Creator Toolkit - Our copyright infringement procedures and protection for YouTube Shorts tools.">
+    <meta name="keywords" content="DMCA policy, copyright infringement, YouTube tools DMCA, digital millennium copyright act, content removal">
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    <meta property="og:title" content="DMCA Policy - Shorts Creator Toolkit">
+    <meta property="og:description" content="Our DMCA copyright infringement procedures for content protection">
+    <meta property="og:type" content="article">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://shortscreator.tools/dmca">
+    
+    <!-- Structured Data for DMCA Policy -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "DMCA Policy",
+      "description": "DMCA Policy for Shorts Creator Toolkit",
+      "url": "https://srgwebonline.github.io/vidsave/dmca.html",
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://srgwebonline.github.io/vidsave/"
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "DMCA Policy"
+        }]
+      }
+    }
+    </script>
+    
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary: #6366f1;
+            --primary-dark: #4f46e5;
+            --secondary: #8b5cf6;
+            --accent: #f59e0b;
+            --text-primary: #1f2937;
+            --text-secondary: #6b7280;
+            --bg-light: #f8fafc;
+            --bg-white: #ffffff;
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.12);
+            --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1);
+            --radius-md: 12px;
+        }
+        
+        .dark-mode {
+            --primary: #818cf8;
+            --primary-dark: #6366f1;
+            --secondary: #a78bfa;
+            --accent: #fbbf24;
+            --text-primary: #f3f4f6;
+            --text-secondary: #d1d5db;
+            --bg-light: #111827;
+            --bg-white: #1f2937;
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.3);
+            --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.4);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.8;
+            color: var(--text-primary);
+            background: var(--bg-light);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Modern Header - Gradient Design */
+        .modern-header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 25px 0;
+            box-shadow: var(--shadow-md);
+            margin-bottom: 30px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .header-brand {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .logo {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 1.8rem;
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            transition: transform 0.3s;
+        }
+        
+        .logo:hover {
+            transform: translateY(-2px);
+        }
+        
+        .logo-icon {
+            background: rgba(255, 255, 255, 0.2);
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+        
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .theme-toggle {
+            background: rgba(255, 255, 255, 0.2);
+            border: none;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            color: white;
+            font-size: 1.2rem;
+            transition: all 0.3s;
+        }
+        
+        .theme-toggle:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: rotate(15deg);
+        }
+        
+        .home-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-weight: 500;
+            transition: all 0.3s;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        .home-button:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+        
+        /* Breadcrumb */
+        .breadcrumb-nav {
+            background: var(--bg-white);
+            padding: 15px 0;
+            border-bottom: 1px solid #e5e7eb;
+            margin-bottom: 20px;
+        }
+        
+        .dark-mode .breadcrumb-nav {
+            border-bottom-color: #374151;
+        }
+        
+        .breadcrumb {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+        
+        .breadcrumb a {
+            color: var(--primary);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .breadcrumb a:hover {
+            color: var(--primary-dark);
+            text-decoration: underline;
+        }
+        
+        .breadcrumb-separator {
+            color: var(--text-secondary);
+        }
+        
+        /* Main Content */
+        .content-container {
+            background: var(--bg-white);
+            border-radius: var(--radius-md);
+            padding: 40px;
+            box-shadow: var(--shadow-sm);
+            margin-bottom: 40px;
+        }
+        
+        h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+            line-height: 1.2;
+        }
+        
+        .last-updated {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-bottom: 2rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 2px solid var(--primary);
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        
+        .last-updated strong {
+            color: var(--text-primary);
+        }
+        
+        h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.8rem;
+            margin: 2.5rem 0 1rem;
+            color: var(--primary);
+            padding-top: 1.5rem;
+            border-top: 2px solid rgba(99, 102, 241, 0.1);
+        }
+        
+        h2:first-of-type {
+            border-top: none;
+            margin-top: 0;
+            padding-top: 0;
+        }
+        
+        h3 {
+            font-size: 1.3rem;
+            margin: 1.5rem 0 0.75rem;
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        h3 i {
+            color: var(--accent);
+        }
+        
+        p {
+            margin-bottom: 1.2rem;
+            color: var(--text-secondary);
+        }
+        
+        ul, ol {
+            margin-left: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-secondary);
+        }
+        
+        li {
+            margin-bottom: 0.75rem;
+            position: relative;
+            padding-left: 0.5rem;
+        }
+        
+        strong {
+            color: var(--text-primary);
+        }
+        
+        .important-box {
+            background: rgba(239, 68, 68, 0.1);
+            border-left: 4px solid #ef4444;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .dark-mode .important-box {
+            background: rgba(239, 68, 68, 0.15);
+        }
+        
+        .legal-box {
+            background: rgba(99, 102, 241, 0.1);
+            border: 2px solid var(--primary);
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 8px;
+        }
+        
+        .dark-mode .legal-box {
+            background: rgba(129, 140, 248, 0.15);
+        }
+        
+        .process-box {
+            background: rgba(34, 197, 94, 0.1);
+            border-left: 4px solid #22c55e;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .dark-mode .process-box {
+            background: rgba(34, 197, 94, 0.15);
+        }
+        
+        .contact-info {
+            background: var(--bg-light);
+            border: 2px solid var(--primary);
+            border-radius: 8px;
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .dark-mode .contact-info {
+            border-color: var(--primary);
+            background: #1f2937;
+        }
+        
+        .contact-info a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+        
+        /* DMCA Notice Format */
+        .dmca-format {
+            background: var(--bg-light);
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .dark-mode .dmca-format {
+            border-color: #374151;
+            background: #1f2937;
+        }
+        
+        .dmca-item {
+            margin-bottom: 1.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        
+        .dark-mode .dmca-item {
+            border-color: #374151;
+        }
+        
+        .dmca-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        
+        .dmca-label {
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+        
+        /* Tool Links */
+        .tool-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin: 2rem 0;
+        }
+        
+        .tool-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--bg-light);
+            color: var(--text-primary);
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-weight: 500;
+            transition: all 0.3s;
+            border: 1px solid #e5e7eb;
+        }
+        
+        .dark-mode .tool-link {
+            border-color: #374151;
+            background: #1f2937;
+        }
+        
+        .tool-link:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(99, 102, 241, 0.2);
+        }
+        
+        /* Counter Notice Section */
+        .counter-notice {
+            background: rgba(245, 158, 11, 0.1);
+            border: 2px dashed var(--accent);
+            border-radius: 8px;
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .dark-mode .counter-notice {
+            background: rgba(245, 158, 11, 0.15);
+        }
+        
+        /* Footer */
+        .main-footer {
+            background: #0f172a;
+            color: #cbd5e1;
+            padding: 3rem 0 2rem;
+            margin-top: 40px;
+        }
+        
+        .dark-mode .main-footer {
+            background: #030712;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+        
+        .footer-section h3 {
+            font-size: 1.25rem;
+            margin-bottom: 1.5rem;
+            color: white;
+        }
+        
+        .footer-links {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .footer-links li {
+            margin-bottom: 0.75rem;
+        }
+        
+        .footer-links a {
+            color: #9ca3af;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid #374151;
+            color: #9ca3af;
+            font-size: 0.875rem;
+        }
+        
+        .copyright a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+        
+        .copyright a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 15px;
+            }
+            
+            .header-actions {
+                width: 100%;
+                justify-content: space-between;
+            }
+            
+            .content-container {
+                padding: 25px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.5rem;
+            }
+            
+            .tool-links {
+                justify-content: center;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .content-container {
+                padding: 20px;
+            }
+            
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            .home-button span {
+                display: none;
+            }
+            
+            .home-button i {
+                margin-right: 0;
+            }
+            
+            .tool-links {
+                flex-direction: column;
+                align-items: stretch;
+            }
+        }
+    </style>
+</head>
+<body class="light-mode">
+    <!-- Modern Gradient Header -->
+    <header class="modern-header">
+        <div class="container header-content">
+            <div class="header-brand">
+                <a href="https://srgwebonline.github.io/vidsave/" class="logo">
+                    <div class="logo-icon">
+                        <i class="fas fa-film"></i>
+                    </div>
+                    <span>Shorts Creator Toolkit</span>
+                </a>
+            </div>
+            
+            <div class="header-actions">
+                <a href="index.html" class="home-button">
+                    <i class="fas fa-arrow-left"></i>
+                    <span>Back to Tools</span>
+                </a>
+                
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb Navigation -->
+    <nav class="breadcrumb-nav">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="https://srgwebonline.github.io/vidsave/">Home</a>
+                <span class="breadcrumb-separator">›</span>
+                <span>DMCA Policy</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container">
+        <div class="content-container">
+            <h1>DMCA Policy</h1>
+            
+            <div class="last-updated">
+                <div><strong>Effective Date:</strong> January 17, 2026</div>
+                <div><strong>Last Updated:</strong> January 17, 2026</div>
+            </div>
+
+            <div class="important-box">
+                <p><strong>⚠️ IMPORTANT LEGAL NOTICE:</strong> This DMCA Policy outlines our procedures for handling copyright infringement claims. We respect intellectual property rights and comply with the Digital Millennium Copyright Act (DMCA).</p>
+            </div>
+
+            <h2>1. DMCA Compliance Statement</h2>
+            <p>Shorts Creator Toolkit ("we," "our," or "us") respects the intellectual property rights of others and expects our users to do the same. We comply with the Digital Millennium Copyright Act (DMCA) and other applicable copyright laws.</p>
+            
+            <div class="legal-box">
+                <h3><i class="fas fa-balance-scale"></i> Our Position on Copyright</h3>
+                <p>We provide tools for content creators that operate within the boundaries of fair use and copyright law. Our tools do not host or store copyrighted content. We act as an intermediary service provider as defined under the DMCA.</p>
+            </div>
+
+            <h2>2. Reporting Copyright Infringement</h2>
+            <p>If you believe that your copyrighted work has been copied in a way that constitutes copyright infringement and is accessible through our Service, please notify our Copyright Agent as specified below.</p>
+
+            <h3><i class="fas fa-exclamation-circle"></i> Required Information for DMCA Notice</h3>
+            <p>A proper DMCA notice must include the following information:</p>
+            
+            <div class="dmca-format">
+                <div class="dmca-item">
+                    <span class="dmca-label">1. Identification of Copyrighted Work</span>
+                    <p>A description of the copyrighted work that you claim has been infringed, including the URL or other specific location where the material you claim is infringing is located.</p>
+                </div>
+                
+                <div class="dmca-item">
+                    <span class="dmca-label">2. Your Contact Information</span>
+                    <p>Your full name, mailing address, telephone number, and email address where we can contact you.</p>
+                </div>
+                
+                <div class="dmca-item">
+                    <span class="dmca-label">3. Statement of Good Faith Belief</span>
+                    <p>A statement that you have a good faith belief that the disputed use is not authorized by the copyright owner, its agent, or the law.</p>
+                </div>
+                
+                <div class="dmca-item">
+                    <span class="dmca-label">4. Statement Under Penalty of Perjury</span>
+                    <p>A statement, made under penalty of perjury, that the above information in your notice is accurate and that you are the copyright owner or authorized to act on the copyright owner's behalf.</p>
+                </div>
+                
+                <div class="dmca-item">
+                    <span class="dmca-label">5. Electronic Signature</span>
+                    <p>Your electronic or physical signature as the copyright owner or authorized representative.</p>
+                </div>
+            </div>
+
+            <h2>3. DMCA Notice Submission</h2>
+            <div class="contact-info">
+                <h3><i class="fas fa-envelope"></i> Submit DMCA Notice To:</h3>
+                <p><strong>Copyright Agent:</strong> DMCA Compliance Officer</p>
+                <p><strong>Email:</strong> dmca@shortscreator.tools</p>
+                <p><strong>Response Time:</strong> We aim to respond to all DMCA notices within 48 business hours</p>
+            </div>
+
+            <div class="process-box">
+                <h3><i class="fas fa-cogs"></i> Our DMCA Process</h3>
+                <p>Upon receipt of a valid DMCA notice, we will:</p>
+                <ol>
+                    <li>Acknowledge receipt of your notice within 48 business hours</li>
+                    <li>Promptly investigate the alleged infringement</li>
+                    <li>Remove or disable access to the allegedly infringing material</li>
+                    <li>Notify the user who posted the material of the takedown</li>
+                    <li>Provide the user with information about submitting a counter-notice</li>
+                </ol>
+            </div>
+
+            <h2>4. Counter-Notification Process</h2>
+            <p>If you believe that material you posted was removed or access to it was disabled by mistake or misidentification, you may submit a counter-notification.</p>
+
+            <div class="counter-notice">
+                <h3><i class="fas fa-undo-alt"></i> Counter-Notice Requirements</h3>
+                <p>A valid counter-notice must include:</p>
+                <ul>
+                    <li>Your physical or electronic signature</li>
+                    <li>Identification of the material that has been removed</li>
+                    <li>A statement under penalty of perjury that you have a good faith belief the material was removed by mistake</li>
+                    <li>Your name, address, and telephone number</li>
+                    <li>A statement consenting to jurisdiction in the federal court where you reside</li>
+                </ul>
+            </div>
+
+            <h2>5. Repeat Infringer Policy</h2>
+            <p>In accordance with the DMCA and other applicable laws, we have adopted a policy of terminating, in appropriate circumstances, users who are deemed to be repeat infringers. We may also, at our sole discretion, limit access to the Service and/or terminate the accounts of any users who infringe any intellectual property rights of others.</p>
+
+            <h2>6. False Claims Warning</h2>
+            <div class="important-box">
+                <p><strong>⚠️ WARNING:</strong> Making false claims of copyright infringement is illegal and may result in liability for damages under Section 512(f) of the DMCA. This includes court costs and attorney's fees.</p>
+            </div>
+
+            <h2>7. Copyright Agent Information</h2>
+            <div class="contact-info">
+                <h3><i class="fas fa-user-tie"></i> Designated Copyright Agent</h3>
+                <p><strong>Name:</strong> DMCA Compliance Officer</p>
+                <p><strong>Service:</strong> Shorts Creator Toolkit</p>
+                <p><strong>Email:</strong> dmca@shortscreator.tools</p>
+                <p><strong>Processing Time:</strong> 48 business hours for initial response</p>
+            </div>
+
+            <h2>8. Third-Party Content Disclaimer</h2>
+            <p>Our Service provides tools that may access or reference third-party content (YouTube videos, Instagram reels, etc.). We are not responsible for the content on these third-party platforms. Any copyright infringement claims regarding third-party content should be directed to the respective platform.</p>
+
+            <h2>9. Fair Use Considerations</h2>
+            <p>Our tools are designed to operate within the boundaries of fair use as defined by copyright law. Fair use includes purposes such as criticism, comment, news reporting, teaching, scholarship, and research. If you believe your content qualifies as fair use, please mention this in your correspondence.</p>
+
+            <h2>10. Changes to This Policy</h2>
+            <p>We reserve the right to modify this DMCA Policy at any time. We will notify users of any changes by posting the new policy on this page and updating the "Last Updated" date. Your continued use of the Service after any changes constitutes your acceptance of the new policy.</p>
+
+            <div class="legal-box">
+                <h3><i class="fas fa-gavel"></i> Legal Disclaimer</h3>
+                <p>This DMCA Policy is provided for informational purposes only and does not constitute legal advice. If you need legal advice regarding copyright infringement, please consult with a qualified attorney.</p>
+            </div>
+
+            <h2>11. Return to Free Tools</h2>
+            <p>Ready to create amazing Shorts? Return to our free tools:</p>
+            <div class="tool-links">
+                <a href="https://srgwebonline.github.io/vidsave/#thumbnail" class="tool-link">
+                    <i class="fas fa-image"></i> Thumbnail Downloader
+                </a>
+                <a href="https://srgwebonline.github.io/vidsave/#hashtags" class="tool-link">
+                    <i class="fas fa-hashtag"></i> Hashtag Generator
+                </a>
+                <a href="https://srgwebonline.github.io/vidsave/#caption" class="tool-link">
+                    <i class="fas fa-pen"></i> Caption Generator
+                </a>
+                <a href="https://srgwebonline.github.io/vidsave/#ideas" class="tool-link">
+                    <i class="fas fa-lightbulb"></i> Ideas Generator
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Shorts Creator Toolkit</h3>
+                    <p>Free professional tools for YouTube Shorts creators. Boost your content creation with our AI-powered toolkit.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Legal Documents</h3>
+                    <ul class="footer-links">
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="term-condition.html">Terms of Service</a></li>
+                        <li><a href="disclaimer.html">Disclaimer</a></li>
+                        <li><a href="dmca.html" style="color: var(--primary); font-weight: 600;">DMCA Policy</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Essential Tools</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html#thumbnail">Thumbnail Downloader</a></li>
+                        <li><a href="index.html#hashtags">Hashtag Generator</a></li>
+                        <li><a href="index.html#caption">Caption Generator</a></li>
+                        <li><a href="index.html#ideas">Video Ideas</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Copyright Resources</h3>
+                    <ul class="footer-links">
+                        <li><a href="https://www.copyright.gov/" target="_blank">U.S. Copyright Office</a></li>
+                        <li><a href="https://www.copyright.gov/dmca/" target="_blank">DMCA Information</a></li>
+                        <li><a href="https://www.youtube.com/intl/en_us/howyoutubeworks/policies/copyright/" target="_blank">YouTube Copyright</a></li>
+                        <li><a href="https://www.eff.org/issues/dmca" target="_blank">EFF on DMCA</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>© 2026 Shorts Creator Toolkit. All rights reserved. This tool is not affiliated with YouTube, Instagram, or Google.</p>
+                <p>By using this website, you agree to our <a href="term-condition.html">Terms</a> and <a href="privacy-policy.html">Privacy Policy</a>.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Font Awesome -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+
+    <script>
+        // Theme Toggle
+        const themeToggle = document.getElementById('themeToggle');
+        const themeIcon = themeToggle.querySelector('i');
+        
+        // Check for saved theme or prefer-color-scheme
+        const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+        const currentTheme = localStorage.getItem('theme');
+        
+        if (currentTheme === 'dark' || (!currentTheme && prefersDarkScheme.matches)) {
+            document.body.classList.add('dark-mode');
+            document.body.classList.remove('light-mode');
+            themeIcon.classList.remove('fa-moon');
+            themeIcon.classList.add('fa-sun');
+        }
+        
+        themeToggle.addEventListener('click', () => {
+            if (document.body.classList.contains('light-mode')) {
+                document.body.classList.remove('light-mode');
+                document.body.classList.add('dark-mode');
+                themeIcon.classList.remove('fa-moon');
+                themeIcon.classList.add('fa-sun');
+                localStorage.setItem('theme', 'dark');
+            } else {
+                document.body.classList.remove('dark-mode');
+                document.body.classList.add('light-mode');
+                themeIcon.classList.remove('fa-sun');
+                themeIcon.classList.add('fa-moon');
+                localStorage.setItem('theme', 'light');
+            }
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const targetId = this.getAttribute('href');
+                if (targetId.startsWith('#')) {
+                    e.preventDefault();
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 100,
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+            });
+        });
+        
+        // Add current year to copyright
+        document.addEventListener('DOMContentLoaded', function() {
+            const yearElements = document.querySelectorAll('.current-year');
+            const currentYear = new Date().getFullYear();
+            yearElements.forEach(element => {
+                element.textContent = currentYear;
+            });
+        });
+    </script>
+
+    <!-- Schema Markup for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LegalService",
+      "name": "DMCA Policy",
+      "description": "DMCA Policy for Shorts Creator Toolkit",
+      "url": "https://srgwebonline.github.io/vidsave/dmca.html",
+      "provider": {
+        "@type": "Organization",
+        "name": "Shorts Creator Toolkit",
+        "url": "https://srgwebonline.github.io/vidsave/",
+        "logo": "https://srgwebonline.github.io/vidsave/favicon.ico"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "Worldwide"
+      },
+      "offers": {
+        "@type": "Offer",
+        "category": "Legal Service"
+      }
+    }
+    </script>
+</body>
+</html>
