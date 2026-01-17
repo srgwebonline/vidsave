@@ -3,137 +3,288 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Terms and Conditions - Shorts Creator Toolkit | Free YouTube Tools</title>
+    <title>Terms of Service - Shorts Creator Toolkit | Free YouTube Shorts Tools</title>
     
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Terms and Conditions for Shorts Creator Toolkit. Read our terms of use for free YouTube Shorts and Instagram Reels creation tools.">
-    <meta name="keywords" content="shorts toolkit terms, YouTube tools terms of service, creator tools agreement, free tools conditions, legal terms">
+    <meta name="description" content="Terms of Service for Shorts Creator Toolkit - Read our terms for using free YouTube Shorts and Instagram Reels creation tools.">
+    <meta name="keywords" content="shorts toolkit terms, terms of service, YouTube tools terms, creator tools agreement, free tools conditions">
     <meta name="robots" content="index, follow">
     <meta name="googlebot" content="index, follow">
-    <meta property="og:title" content="Terms and Conditions - Shorts Creator Toolkit">
-    <meta property="og:description" content="Legal terms for using our free Shorts creation tools">
+    <meta property="og:title" content="Terms of Service - Shorts Creator Toolkit">
+    <meta property="og:description" content="Terms and conditions for using our free Shorts creation tools">
     <meta property="og:type" content="article">
     
     <!-- Canonical URL -->
     <link rel="canonical" href="https://shortscreator.tools/terms">
     
-    <!-- Structured Data -->
+    <!-- Structured Data for Terms of Service -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "WebPage",
-      "name": "Terms and Conditions",
-      "description": "Terms and Conditions for Shorts Creator Toolkit",
-      "url": "https://shortscreator.tools/terms",
+      "name": "Terms of Service",
+      "description": "Terms of Service for Shorts Creator Toolkit",
+      "url": "https://srgwebonline.github.io/vidsave/term-condition.html",
       "breadcrumb": {
         "@type": "BreadcrumbList",
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://shortscreator.tools/"
+          "item": "https://srgwebonline.github.io/vidsave/"
         },{
           "@type": "ListItem",
           "position": 2,
-          "name": "Terms and Conditions"
+          "name": "Terms of Service"
         }]
       }
     }
     </script>
     
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <style>
         :root {
             --primary: #6366f1;
             --primary-dark: #4f46e5;
+            --secondary: #8b5cf6;
+            --accent: #f59e0b;
             --text-primary: #1f2937;
             --text-secondary: #6b7280;
             --bg-light: #f8fafc;
             --bg-white: #ffffff;
             --shadow-sm: 0 1px 3px rgba(0,0,0,0.12);
+            --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1);
+            --radius-md: 12px;
+        }
+        
+        .dark-mode {
+            --primary: #818cf8;
+            --primary-dark: #6366f1;
+            --secondary: #a78bfa;
+            --accent: #fbbf24;
+            --text-primary: #f3f4f6;
+            --text-secondary: #d1d5db;
+            --bg-light: #111827;
+            --bg-white: #1f2937;
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.3);
+            --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.4);
         }
         
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            transition: background-color 0.3s, color 0.3s;
         }
         
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            font-family: 'Inter', sans-serif;
             line-height: 1.8;
             color: var(--text-primary);
             background: var(--bg-light);
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
+            min-height: 100vh;
         }
         
         .container {
-            background: var(--bg-white);
-            border-radius: 12px;
-            padding: 40px;
-            box-shadow: var(--shadow-sm);
-            margin-top: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
         }
         
-        .header {
+        /* Modern Header - Gradient Design */
+        .modern-header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 25px 0;
+            box-shadow: var(--shadow-md);
+            margin-bottom: 30px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .header-content {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding-bottom: 20px;
-            border-bottom: 2px solid #e5e7eb;
-            margin-bottom: 30px;
+        }
+        
+        .header-brand {
+            display: flex;
+            align-items: center;
+            gap: 15px;
         }
         
         .logo {
-            font-size: 24px;
+            font-family: 'Poppins', sans-serif;
             font-weight: 700;
-            color: var(--primary);
+            font-size: 1.8rem;
+            color: white;
             text-decoration: none;
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 12px;
+            transition: transform 0.3s;
         }
         
-        .home-link {
-            color: var(--primary);
-            text-decoration: none;
-            font-weight: 500;
-            padding: 8px 16px;
-            border-radius: 6px;
+        .logo:hover {
+            transform: translateY(-2px);
+        }
+        
+        .logo-icon {
+            background: rgba(255, 255, 255, 0.2);
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+        
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .theme-toggle {
+            background: rgba(255, 255, 255, 0.2);
+            border: none;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            color: white;
+            font-size: 1.2rem;
             transition: all 0.3s;
         }
         
-        .home-link:hover {
-            background: var(--bg-light);
+        .theme-toggle:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: rotate(15deg);
+        }
+        
+        .home-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-weight: 500;
+            transition: all 0.3s;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        .home-button:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+        
+        /* Breadcrumb */
+        .breadcrumb-nav {
+            background: var(--bg-white);
+            padding: 15px 0;
+            border-bottom: 1px solid #e5e7eb;
+            margin-bottom: 20px;
+        }
+        
+        .dark-mode .breadcrumb-nav {
+            border-bottom-color: #374151;
+        }
+        
+        .breadcrumb {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+        
+        .breadcrumb a {
+            color: var(--primary);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .breadcrumb a:hover {
+            color: var(--primary-dark);
+            text-decoration: underline;
+        }
+        
+        .breadcrumb-separator {
+            color: var(--text-secondary);
+        }
+        
+        /* Main Content */
+        .content-container {
+            background: var(--bg-white);
+            border-radius: var(--radius-md);
+            padding: 40px;
+            box-shadow: var(--shadow-sm);
+            margin-bottom: 40px;
         }
         
         h1 {
+            font-family: 'Poppins', sans-serif;
             font-size: 2.5rem;
             margin-bottom: 1rem;
             color: var(--text-primary);
+            line-height: 1.2;
         }
         
         .last-updated {
             color: var(--text-secondary);
             font-size: 0.9rem;
             margin-bottom: 2rem;
-            padding-bottom: 1rem;
-            border-bottom: 1px solid #e5e7eb;
+            padding-bottom: 1.5rem;
+            border-bottom: 2px solid var(--primary);
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        
+        .last-updated strong {
+            color: var(--text-primary);
         }
         
         h2 {
-            font-size: 1.5rem;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.8rem;
             margin: 2.5rem 0 1rem;
-            color: var(--text-primary);
-            padding-bottom: 0.5rem;
-            border-bottom: 2px solid var(--bg-light);
+            color: var(--primary);
+            padding-top: 1.5rem;
+            border-top: 2px solid rgba(99, 102, 241, 0.1);
+        }
+        
+        h2:first-of-type {
+            border-top: none;
+            margin-top: 0;
+            padding-top: 0;
         }
         
         h3 {
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             margin: 1.5rem 0 0.75rem;
             color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        h3 i {
+            color: var(--accent);
         }
         
         p {
@@ -142,325 +293,575 @@
         }
         
         ul, ol {
-            margin-left: 2rem;
+            margin-left: 1.5rem;
             margin-bottom: 1.5rem;
+            color: var(--text-secondary);
         }
         
         li {
             margin-bottom: 0.75rem;
-            color: var(--text-secondary);
+            position: relative;
+            padding-left: 0.5rem;
         }
         
         strong {
             color: var(--text-primary);
         }
         
-        .warning-box {
-            background: #fef3f2;
-            border-left: 4px solid #f04444;
+        .highlight-box {
+            background: rgba(99, 102, 241, 0.1);
+            border-left: 4px solid var(--primary);
             padding: 1.5rem;
             margin: 2rem 0;
             border-radius: 0 8px 8px 0;
         }
         
-        .info-box {
-            background: #f0f9ff;
-            border: 1px solid #bae6fd;
-            border-radius: 8px;
-            padding: 1.5rem;
-            margin: 2rem 0;
+        .dark-mode .highlight-box {
+            background: rgba(129, 140, 248, 0.1);
         }
         
-        .important-note {
-            background: #fff7ed;
-            border: 1px solid #fed7aa;
-            border-radius: 8px;
+        .warning-box {
+            background: rgba(245, 158, 11, 0.1);
+            border-left: 4px solid var(--accent);
             padding: 1.5rem;
             margin: 2rem 0;
+            border-radius: 0 8px 8px 0;
         }
         
-        .toc {
+        .dark-mode .warning-box {
+            background: rgba(245, 158, 11, 0.15);
+        }
+        
+        .contact-info {
             background: var(--bg-light);
+            border: 1px solid #e5e7eb;
             border-radius: 8px;
             padding: 1.5rem;
             margin: 2rem 0;
         }
         
-        .toc ul {
-            list-style-type: none;
-            margin-left: 0;
+        .dark-mode .contact-info {
+            border-color: #374151;
+            background: #1f2937;
         }
         
-        .toc a {
+        .contact-info a {
             color: var(--primary);
             text-decoration: none;
         }
         
-        .toc a:hover {
+        .contact-info a:hover {
             text-decoration: underline;
         }
         
-        footer {
-            text-align: center;
-            margin-top: 3rem;
-            padding-top: 2rem;
-            border-top: 1px solid #e5e7eb;
-            color: var(--text-secondary);
-            font-size: 0.9rem;
+        /* Tool Links */
+        .tool-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin: 2rem 0;
         }
         
+        .tool-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--bg-light);
+            color: var(--text-primary);
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-weight: 500;
+            transition: all 0.3s;
+            border: 1px solid #e5e7eb;
+        }
+        
+        .dark-mode .tool-link {
+            border-color: #374151;
+            background: #1f2937;
+        }
+        
+        .tool-link:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(99, 102, 241, 0.2);
+        }
+        
+        /* Table Styles */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            background: var(--bg-light);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .dark-mode table {
+            background: #1f2937;
+        }
+        
+        th {
+            background: var(--primary);
+            color: white;
+            padding: 1rem;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        td {
+            padding: 1rem;
+            border-bottom: 1px solid #e5e7eb;
+            color: var(--text-secondary);
+        }
+        
+        .dark-mode td {
+            border-color: #374151;
+        }
+        
+        tr:last-child td {
+            border-bottom: none;
+        }
+        
+        /* Footer */
+        .main-footer {
+            background: #0f172a;
+            color: #cbd5e1;
+            padding: 3rem 0 2rem;
+            margin-top: 40px;
+        }
+        
+        .dark-mode .main-footer {
+            background: #030712;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+        
+        .footer-section h3 {
+            font-size: 1.25rem;
+            margin-bottom: 1.5rem;
+            color: white;
+        }
+        
+        .footer-links {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .footer-links li {
+            margin-bottom: 0.75rem;
+        }
+        
+        .footer-links a {
+            color: #9ca3af;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid #374151;
+            color: #9ca3af;
+            font-size: 0.875rem;
+        }
+        
+        .copyright a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+        
+        .copyright a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Responsive */
         @media (max-width: 768px) {
-            body {
-                padding: 10px;
+            .header-content {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 15px;
             }
             
-            .container {
-                padding: 20px;
+            .header-actions {
+                width: 100%;
+                justify-content: space-between;
+            }
+            
+            .content-container {
+                padding: 25px;
             }
             
             h1 {
                 font-size: 2rem;
             }
             
-            .header {
+            h2 {
+                font-size: 1.5rem;
+            }
+            
+            .tool-links {
+                justify-content: center;
+            }
+            
+            table {
+                display: block;
+                overflow-x: auto;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .content-container {
+                padding: 20px;
+            }
+            
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            .home-button span {
+                display: none;
+            }
+            
+            .home-button i {
+                margin-right: 0;
+            }
+            
+            .tool-links {
                 flex-direction: column;
-                align-items: flex-start;
-                gap: 15px;
+                align-items: stretch;
             }
         }
     </style>
 </head>
-<body>
-    <div class="container">
-        <!-- Header with Home Link -->
-        <div class="header">
-            <a href="https://shortscreator.tools/" class="logo">
-                <i class="fas fa-film"></i> Shorts Creator Toolkit
-            </a>
-            <a href="https://shortscreator.tools/" class="home-link">
-                ← Back to Tools
-            </a>
+<body class="light-mode">
+    <!-- Modern Gradient Header -->
+    <header class="modern-header">
+        <div class="container header-content">
+            <div class="header-brand">
+                <a href="https://srgwebonline.github.io/vidsave/" class="logo">
+                    <div class="logo-icon">
+                        <i class="fas fa-film"></i>
+                    </div>
+                    <span>Shorts Creator Toolkit</span>
+                </a>
+            </div>
+            
+            <div class="header-actions">
+                <a href="index.html" class="home-button">
+                    <i class="fas fa-arrow-left"></i>
+                    <span>Back to Tools</span>
+                </a>
+                
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
         </div>
+    </header>
 
-        <h1>Terms and Conditions</h1>
-        
-        <div class="last-updated">
-            <strong>Effective Date:</strong> January 17, 2026<br>
-            <strong>Last Updated:</strong> January 17, 2026
+    <!-- Breadcrumb Navigation -->
+    <nav class="breadcrumb-nav">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="https://srgwebonline.github.io/vidsave/">Home</a>
+                <span class="breadcrumb-separator">›</span>
+                <span>Terms of Service</span>
+            </div>
         </div>
+    </nav>
 
-        <div class="toc">
-            <h3>Table of Contents</h3>
+    <!-- Main Content -->
+    <main class="container">
+        <div class="content-container">
+            <h1>Terms of Service</h1>
+            
+            <div class="last-updated">
+                <div><strong>Effective Date:</strong> January 17, 2026</div>
+                <div><strong>Last Updated:</strong> January 17, 2026</div>
+            </div>
+
+            <div class="warning-box">
+                <p><strong>⚠️ Important Legal Notice:</strong> By accessing or using Shorts Creator Toolkit, you agree to be bound by these Terms of Service. If you do not agree with any part of these terms, you must immediately discontinue use of our services.</p>
+            </div>
+
+            <h2>1. Acceptance of Terms</h2>
+            <p>Welcome to Shorts Creator Toolkit ("we," "our," or "us"). By accessing and using our website located at <a href="https://srgwebonline.github.io/vidsave/">https://srgwebonline.github.io/vidsave/</a> (the "Site"), you agree to comply with and be bound by these Terms of Service.</p>
+            <p>These terms apply to all visitors, users, and others who access or use the Service. Your access to and use of the Service is conditioned on your acceptance of and compliance with these Terms.</p>
+
+            <h2>2. Description of Service</h2>
+            <p>Shorts Creator Toolkit provides free, web-based tools for content creators, including but not limited to:</p>
             <ul>
-                <li><a href="#acceptance">1. Acceptance of Terms</a></li>
-                <li><a href="#description">2. Service Description</a></li>
-                <li><a href="#eligibility">3. Eligibility</a></li>
-                <li><a href="#user-responsibilities">4. User Responsibilities</a></li>
-                <li><a href="#prohibited">5. Prohibited Activities</a></li>
-                <li><a href="#third-party">6. Third-Party Services</a></li>
-                <li><a href="#intellectual-property">7. Intellectual Property</a></li>
-                <li><a href="#disclaimer">8. Disclaimer of Warranties</a></li>
-                <li><a href="#limitation">9. Limitation of Liability</a></li>
-                <li><a href="#indemnification">10. Indemnification</a></li>
-                <li><a href="#termination">11. Termination</a></li>
-                <li><a href="#modifications">12. Modifications</a></li>
-                <li><a href="#governing-law">13. Governing Law</a></li>
-                <li><a href="#contact">14. Contact Information</a></li>
+                <li>YouTube Shorts thumbnail downloader</li>
+                <li>Hashtag generator for social media</li>
+                <li>AI-powered caption generator</li>
+                <li>Video idea generator</li>
+                <li>Shorts metadata analyzer</li>
+                <li>Embed code generator</li>
+                <li>Instagram Reel analyzer</li>
             </ul>
+            <p>All tools are provided for informational and educational purposes only. Results are generated algorithmically and should be reviewed before use.</p>
+
+            <h2>3. User Responsibilities</h2>
+            <h3><i class="fas fa-user-check"></i> Acceptable Use</h3>
+            <p>You agree to use our Service only for lawful purposes and in accordance with these Terms. You specifically agree not to:</p>
+            <ul>
+                <li>Use the Service in any way that violates any applicable law or regulation</li>
+                <li>Use the Service for any unauthorized commercial purpose</li>
+                <li>Attempt to gain unauthorized access to any part of the Service</li>
+                <li>Use any automated means to access the Service without our permission</li>
+                <li>Interfere with or disrupt the integrity or performance of the Service</li>
+                <li>Use the Service to infringe upon intellectual property rights</li>
+            </ul>
+
+            <h3><i class="fas fa-balance-scale"></i> Platform Compliance</h3>
+            <p>You are solely responsible for ensuring that your use of our tools complies with:</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Platform</th>
+                        <th>Key Guidelines to Follow</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>YouTube</strong></td>
+                        <td>YouTube Terms of Service, Community Guidelines, and API Terms</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Instagram</strong></td>
+                        <td>Instagram Terms of Use, Community Guidelines, and Platform Policies</td>
+                    </tr>
+                    <tr>
+                        <td><strong>General</strong></td>
+                        <td>Copyright laws, fair use principles, and content creator ethics</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2>4. Intellectual Property Rights</h2>
+            <h3><i class="fas fa-copyright"></i> Our Content</h3>
+            <p>All content, features, and functionality on the Site, including but not limited to text, graphics, logos, icons, images, audio clips, digital downloads, and software, are the exclusive property of Shorts Creator Toolkit and are protected by international copyright laws.</p>
+            
+            <h3><i class="fas fa-external-link-alt"></i> Third-Party Content</h3>
+            <p>Our Service may provide access to third-party content (YouTube thumbnails, Instagram data, etc.). You must respect the intellectual property rights of third parties and comply with their terms of service when using such content.</p>
+            
+            <h3><i class="fas fa-code"></i> License Grant</h3>
+            <p>We grant you a limited, non-exclusive, non-transferable, revocable license to use our Service for personal, non-commercial purposes, subject to these Terms.</p>
+
+            <h2>5. Disclaimer of Warranties</h2>
+            <div class="highlight-box">
+                <p><strong>⚠️ Important:</strong> Our Service is provided "as is" and "as available" without any warranties of any kind, either express or implied.</p>
+            </div>
+            
+            <p>We do not warrant that:</p>
+            <ul>
+                <li>The Service will be uninterrupted or error-free</li>
+                <li>The results obtained from using the Service will be accurate or reliable</li>
+                <li>The quality of any tools or information will meet your expectations</li>
+                <li>Any errors in the Service will be corrected</li>
+            </ul>
+            <p>To the fullest extent permitted by law, we disclaim all warranties, express or implied, including implied warranties of merchantability, fitness for a particular purpose, and non-infringement.</p>
+
+            <h2>6. Limitation of Liability</h2>
+            <p>In no event shall Shorts Creator Toolkit, its owners, employees, or affiliates be liable for any indirect, incidental, special, consequential, or punitive damages, including without limitation, loss of profits, data, use, goodwill, or other intangible losses, resulting from:</p>
+            <ul>
+                <li>Your access to or use of or inability to access or use the Service</li>
+                <li>Any conduct or content of any third party on the Service</li>
+                <li>Any content obtained from the Service</li>
+                <li>Unauthorized access, use, or alteration of your transmissions or content</li>
+            </ul>
+            <p>Our total liability for any claim arising out of or relating to these Terms or the Service shall not exceed the amount you have paid us in the past twelve months, or if you haven't paid anything, then zero dollars.</p>
+
+            <h2>7. Third-Party Services</h2>
+            <p>Our Service may contain links to third-party websites or services that are not owned or controlled by us. We have no control over, and assume no responsibility for:</p>
+            <ul>
+                <li>The content, privacy policies, or practices of any third-party sites or services</li>
+                <li>Any damages or losses caused by your use of third-party services</li>
+            </ul>
+            <p>You acknowledge and agree that we shall not be responsible or liable, directly or indirectly, for any damage or loss caused or alleged to be caused by or in connection with use of or reliance on any such content, goods, or services available on or through any such websites or services.</p>
+
+            <h2>8. Termination</h2>
+            <p>We may terminate or suspend your access to our Service immediately, without prior notice or liability, for any reason whatsoever, including without limitation if you breach the Terms.</p>
+            <p>Upon termination, your right to use the Service will immediately cease. If you wish to terminate your account, you may simply discontinue using the Service.</p>
+
+            <h2>9. Changes to Terms</h2>
+            <p>We reserve the right, at our sole discretion, to modify or replace these Terms at any time. If a revision is material, we will try to provide at least 30 days' notice prior to any new terms taking effect.</p>
+            <p>By continuing to access or use our Service after those revisions become effective, you agree to be bound by the revised terms. If you do not agree to the new terms, please stop using the Service.</p>
+
+            <h2>10. Governing Law</h2>
+            <p>These Terms shall be governed and construed in accordance with the laws of the State of Delaware, United States, without regard to its conflict of law provisions.</p>
+            <p>Our failure to enforce any right or provision of these Terms will not be considered a waiver of those rights. If any provision of these Terms is held to be invalid or unenforceable by a court, the remaining provisions of these Terms will remain in effect.</p>
+
+            <h2>11. Contact Information</h2>
+            <div class="contact-info">
+                <p>If you have any questions about these Terms, please contact us:</p>
+                <p><strong>Email:</strong> legal@shortscreator.tools</p>
+                <p><strong>Website:</strong> <a href="https://srgwebonline.github.io/vidsave/">shortscreator.tools</a></p>
+                <p><strong>Response Time:</strong> We aim to respond to all legal inquiries within 7 business days.</p>
+            </div>
+
+            <div class="highlight-box">
+                <p><strong>📝 Note:</strong> This is a free service provided for educational and informational purposes. We reserve the right to modify, suspend, or discontinue any part of the Service at any time without notice.</p>
+            </div>
+
+            <h2>12. Return to Free Tools</h2>
+            <p>Ready to create amazing Shorts? Return to our free tools:</p>
+            <div class="tool-links">
+                <a href="https://srgwebonline.github.io/vidsave/#thumbnail" class="tool-link">
+                    <i class="fas fa-image"></i> Thumbnail Downloader
+                </a>
+                <a href="https://srgwebonline.github.io/vidsave/#hashtags" class="tool-link">
+                    <i class="fas fa-hashtag"></i> Hashtag Generator
+                </a>
+                <a href="https://srgwebonline.github.io/vidsave/#caption" class="tool-link">
+                    <i class="fas fa-pen"></i> Caption Generator
+                </a>
+                <a href="https://srgwebonline.github.io/vidsave/#ideas" class="tool-link">
+                    <i class="fas fa-lightbulb"></i> Ideas Generator
+                </a>
+            </div>
         </div>
+    </main>
 
-        <div class="warning-box">
-            <p><strong>Important:</strong> By accessing or using Shorts Creator Toolkit, you agree to be bound by these Terms and Conditions. If you do not agree with any part of these terms, you must not use our services.</p>
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Shorts Creator Toolkit</h3>
+                    <p>Free professional tools for YouTube Shorts creators. Boost your content creation with our AI-powered toolkit.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Legal Pages</h3>
+                    <ul class="footer-links">
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="term-condition.html">Terms of Service</a></li>
+                        <li><a href="disclaimer.html">Disclaimer</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Essential Tools</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html#thumbnail">Thumbnail Downloader</a></li>
+                        <li><a href="index.html#hashtags">Hashtag Generator</a></li>
+                        <li><a href="index.html#caption">Caption Generator</a></li>
+                        <li><a href="index.html#ideas">Video Ideas</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html#info-viewer">Info Viewer</a></li>
+                        <li><a href="index.html#embed-generator">Embed Generator</a></li>
+                        <li><a href="index.html#instagram-analyzer">Reel Analyzer</a></li>
+                        <li><a href="index.html#metadata">Analytics</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>© 2026 Shorts Creator Toolkit. All rights reserved. This tool is not affiliated with YouTube, Instagram, or Google.</p>
+                <p>By using this website, you agree to our <a href="term-condition.html">Terms</a> and <a href="privacy-policy.html">Privacy Policy</a>.</p>
+            </div>
         </div>
+    </footer>
 
-        <h2 id="acceptance">1. Acceptance of Terms</h2>
-        <p>These Terms and Conditions ("Terms") govern your access to and use of Shorts Creator Toolkit ("Service"), available at <a href="https://shortscreator.tools">shortscreator.tools</a>. By accessing or using our Service, you agree to be bound by these Terms.</p>
-        <p>If you are using the Service on behalf of an organization, you represent that you have the authority to bind that organization to these Terms.</p>
-
-        <h2 id="description">2. Service Description</h2>
-        <p>Shorts Creator Toolkit provides free web-based tools for content creators, including:</p>
-        <ul>
-            <li>YouTube Shorts thumbnail downloader</li>
-            <li>Hashtag generator for YouTube and Instagram</li>
-            <li>Caption generator</li>
-            <li>Video ideas generator</li>
-            <li>YouTube Shorts information viewer</li>
-            <li>Embed code generator</li>
-            <li>Instagram Reels analyzer</li>
-            <li>Analytics viewer</li>
-        </ul>
-        <p>All tools are provided free of charge and operate client-side in your web browser.</p>
-
-        <h2 id="eligibility">3. Eligibility</h2>
-        <p>You must be at least 13 years old to use our Service. By using the Service, you represent and warrant that you meet this age requirement.</p>
-        <p>If you are under 18, you must have parental or guardian consent to use our Service.</p>
-
-        <h2 id="user-responsibilities">4. User Responsibilities</h2>
-        <p>As a user of our Service, you agree to:</p>
-        <ul>
-            <li>Use the Service only for lawful purposes</li>
-            <li>Comply with all applicable laws and regulations</li>
-            <li>Respect intellectual property rights</li>
-            <li>Not use the Service to infringe on others' rights</li>
-            <li>Use the tools in accordance with YouTube's and Instagram's Terms of Service</li>
-        </ul>
-
-        <h2 id="prohibited">5. Prohibited Activities</h2>
-        <p>You agree not to:</p>
-        <ul>
-            <li>Use the Service for any illegal or unauthorized purpose</li>
-            <li>Attempt to circumvent any security measures</li>
-            <li>Use automated systems (bots, scrapers) to access the Service</li>
-            <li>Attempt to reverse engineer, decompile, or disassemble any part of the Service</li>
-            <li>Use the Service to violate YouTube's or Instagram's Terms of Service</li>
-            <li>Generate or distribute harmful, abusive, or illegal content</li>
-            <li>Use the Service to harass, threaten, or intimidate others</li>
-            <li>Impersonate any person or entity</li>
-            <li>Interfere with or disrupt the Service or servers</li>
-        </ul>
-
-        <div class="important-note">
-            <p><strong>Note on Fair Use:</strong> Our thumbnail downloader and info viewer tools are designed for personal, non-commercial use. Please respect YouTube's terms when using these tools.</p>
-        </div>
-
-        <h2 id="third-party">6. Third-Party Services</h2>
-        <h3>6.1 YouTube and Instagram</h3>
-        <p>Our Service interacts with YouTube and Instagram content. You must comply with:</p>
-        <ul>
-            <li><a href="https://www.youtube.com/t/terms" target="_blank">YouTube Terms of Service</a></li>
-            <li><a href="https://help.instagram.com/581066165581870" target="_blank">Instagram Terms of Use</a></li>
-            <li>Respective platform's API terms</li>
-        </ul>
-        
-        <h3>6.2 Google AdSense</h3>
-        <p>We display Google AdSense advertisements. By using our Service, you agree to Google's terms for ad serving.</p>
-
-        <h2 id="intellectual-property">7. Intellectual Property</h2>
-        <h3>7.1 Our Intellectual Property</h3>
-        <p>All content, features, and functionality of the Service (including text, graphics, logos, and software) are owned by Shorts Creator Toolkit and are protected by international copyright, trademark, and other intellectual property laws.</p>
-        
-        <h3>7.2 User-Generated Content</h3>
-        <p>Since we don't store user content, any content you generate using our tools remains your property. We claim no ownership over the hashtags, captions, or ideas you generate.</p>
-        
-        <h3>7.3 Third-Party Intellectual Property</h3>
-        <p>YouTube, Instagram, and other platform trademarks are property of their respective owners. We are not affiliated with or endorsed by YouTube, Instagram, or Google.</p>
-
-        <h2 id="disclaimer">8. Disclaimer of Warranties</h2>
-        <div class="warning-box">
-            <p><strong>THE SERVICE IS PROVIDED "AS IS" AND "AS AVAILABLE" WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED.</strong></p>
-        </div>
-        <p>We do not warrant that:</p>
-        <ul>
-            <li>The Service will be uninterrupted or error-free</li>
-            <li>The tools will always be available</li>
-            <li>The results generated will be accurate or suitable for your needs</li>
-            <li>The Service will meet your specific requirements</li>
-            <li>Any defects will be corrected</li>
-        </ul>
-        <p>We expressly disclaim all warranties, including but not limited to implied warranties of merchantability, fitness for a particular purpose, and non-infringement.</p>
-
-        <h2 id="limitation">9. Limitation of Liability</h2>
-        <p>To the maximum extent permitted by law, Shorts Creator Toolkit shall not be liable for:</p>
-        <ul>
-            <li>Any indirect, incidental, special, consequential, or punitive damages</li>
-            <li>Loss of profits, data, use, goodwill, or other intangible losses</li>
-            <li>Damages resulting from your use or inability to use the Service</li>
-            <li>Unauthorized access to or use of our servers</li>
-            <li>Any interruption or cessation of transmission to or from the Service</li>
-            <li>Any errors or omissions in any content</li>
-            <li>Any content posted, emailed, transmitted, or otherwise made available through the Service</li>
-        </ul>
-        <p>Our total liability for any claim arising out of or relating to these Terms or the Service shall not exceed $10 USD.</p>
-
-        <h2 id="indemnification">10. Indemnification</h2>
-        <p>You agree to indemnify, defend, and hold harmless Shorts Creator Toolkit, its affiliates, officers, directors, employees, and agents from any claims, liabilities, damages, losses, costs, or expenses (including reasonable attorneys' fees) arising from:</p>
-        <ul>
-            <li>Your use of the Service</li>
-            <li>Your violation of these Terms</li>
-            <li>Your violation of any third-party rights</li>
-            <li>Your violation of any applicable laws</li>
-            <li>Any content you generate or distribute using our tools</li>
-        </ul>
-
-        <h2 id="termination">11. Termination</h2>
-        <p>We may terminate or suspend your access to the Service immediately, without prior notice or liability, for any reason, including but not limited to:</p>
-        <ul>
-            <li>Breach of these Terms</li>
-            <li>Violation of applicable laws</li>
-            <li>Harmful or abusive use of the Service</li>
-            <li>Attempts to circumvent Service limitations</li>
-        </ul>
-        <p>Upon termination, your right to use the Service will immediately cease.</p>
-
-        <h2 id="modifications">12. Modifications</h2>
-        <p>We reserve the right to modify or replace these Terms at any time. If a revision is material, we will provide at least 30 days' notice prior to any new terms taking effect.</p>
-        <p>Your continued use of the Service after any changes constitutes acceptance of the new Terms.</p>
-
-        <h2 id="governing-law">13. Governing Law</h2>
-        <p>These Terms shall be governed by and construed in accordance with the laws of the United States, without regard to its conflict of law provisions.</p>
-        <p>Any disputes arising from these Terms or your use of the Service shall be subject to the exclusive jurisdiction of the courts located in the United States.</p>
-
-        <h2 id="contact">14. Contact Information</h2>
-        <div class="info-box">
-            <p>If you have any questions about these Terms and Conditions, please contact us:</p>
-            <p><strong>Email:</strong> legal@shortscreator.tools</p>
-            <p><strong>Website:</strong> <a href="https://shortscreator.tools">shortscreator.tools</a></p>
-            <p><strong>Contact Form:</strong> <a href="https://shortscreator.tools/contact">Contact Us</a></p>
-        </div>
-
-        <h2>Return to Our Tools</h2>
-        <p>Ready to create amazing content? Use our free tools:</p>
-        <p>
-            <a href="https://shortscreator.tools/#thumbnail" class="home-link">Thumbnail Downloader</a> • 
-            <a href="https://shortscreator.tools/#hashtags" class="home-link">Hashtag Generator</a> • 
-            <a href="https://shortscreator.tools/#caption" class="home-link">Caption Generator</a> • 
-            <a href="https://shortscreator.tools/#ideas" class="home-link">Ideas Generator</a>
-        </p>
-        <p>
-            <a href="https://shortscreator.tools/#info-viewer" class="home-link">Info Viewer</a> • 
-            <a href="https://shortscreator.tools/#embed-generator" class="home-link">Embed Generator</a> • 
-            <a href="https://shortscreator.tools/#instagram-analyzer" class="home-link">Reel Analyzer</a> • 
-            <a href="https://shortscreator.tools/#metadata" class="home-link">Analytics</a>
-        </p>
-
-        <footer>
-            <p>© 2026 Shorts Creator Toolkit. All rights reserved.</p>
-            <p>This document is not a substitute for legal advice. Consult with an attorney for specific legal guidance.</p>
-            <p>
-                <a href="https://shortscreator.tools/">Home</a> | 
-                <a href="/privacy">Privacy Policy</a> | 
-                <a href="/terms">Terms and Conditions</a> | 
-                <a href="/disclaimer">Disclaimer</a> | 
-                <a href="/contact">Contact Us</a>
-            </p>
-        </footer>
-    </div>
-
-    <!-- Font Awesome for icons -->
+    <!-- Font Awesome -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+
+    <script>
+        // Theme Toggle
+        const themeToggle = document.getElementById('themeToggle');
+        const themeIcon = themeToggle.querySelector('i');
+        
+        // Check for saved theme or prefer-color-scheme
+        const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+        const currentTheme = localStorage.getItem('theme');
+        
+        if (currentTheme === 'dark' || (!currentTheme && prefersDarkScheme.matches)) {
+            document.body.classList.add('dark-mode');
+            document.body.classList.remove('light-mode');
+            themeIcon.classList.remove('fa-moon');
+            themeIcon.classList.add('fa-sun');
+        }
+        
+        themeToggle.addEventListener('click', () => {
+            if (document.body.classList.contains('light-mode')) {
+                document.body.classList.remove('light-mode');
+                document.body.classList.add('dark-mode');
+                themeIcon.classList.remove('fa-moon');
+                themeIcon.classList.add('fa-sun');
+                localStorage.setItem('theme', 'dark');
+            } else {
+                document.body.classList.remove('dark-mode');
+                document.body.classList.add('light-mode');
+                themeIcon.classList.remove('fa-sun');
+                themeIcon.classList.add('fa-moon');
+                localStorage.setItem('theme', 'light');
+            }
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const targetId = this.getAttribute('href');
+                if (targetId.startsWith('#')) {
+                    e.preventDefault();
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 100,
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+            });
+        });
+        
+        // Add current year to copyright
+        document.addEventListener('DOMContentLoaded', function() {
+            const yearElements = document.querySelectorAll('.current-year');
+            const currentYear = new Date().getFullYear();
+            yearElements.forEach(element => {
+                element.textContent = currentYear;
+            });
+        });
+    </script>
 
     <!-- Schema Markup for SEO -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "TermsAndConditions",
-      "name": "Terms and Conditions",
-      "url": "https://shortscreator.tools/terms",
+      "@type": "TermsOfService",
+      "name": "Terms of Service",
+      "url": "https://srgwebonline.github.io/vidsave/term-condition.html",
       "datePublished": "2026-01-17",
       "dateModified": "2026-01-17",
       "publisher": {
         "@type": "Organization",
         "name": "Shorts Creator Toolkit",
-        "url": "https://shortscreator.tools"
+        "url": "https://srgwebonline.github.io/vidsave/",
+        "logo": "https://srgwebonline.github.io/vidsave/favicon.ico"
       },
-      "about": {
-        "@type": "Thing",
-        "name": "Online Service Terms"
-      },
-      "isPartOf": {
-        "@type": "WebSite",
-        "name": "Shorts Creator Toolkit",
-        "url": "https://shortscreator.tools"
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://srgwebonline.github.io/vidsave/term-condition.html"
       }
     }
     </script>
